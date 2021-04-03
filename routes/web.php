@@ -16,11 +16,11 @@ use App\Http\Controllers\PostController;
 */
 
 Route::get('/', function () {
+    return view('page_view.index');
+});
+Route::get('/login', function () {
     return view('home.login');
 });
-// Route::get('/app', function () {
-//     return view('page_core.app');
-// });
 Route::get('/dashboard', function () {
     return view('page_layout.dashboard');
 });
