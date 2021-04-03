@@ -4,7 +4,7 @@
 <!-- Mirrored from coderthemes.com/hyper_2/saas/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Apr 2021 10:28:58 GMT -->
 <head>
         <meta charset="utf-8" />
-        <title>Dashboard | Hyper - Responsive Bootstrap 5 Admin Dashboard</title>
+        <title>Noor Dashboard</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
@@ -19,7 +19,7 @@
         <link href="{{URL::asset('assets_dashboard/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{URL::asset('assets_dashboard/css/app.min.css')}}" rel="stylesheet" type="text/css" id="light-style" />
         <link href="{{URL::asset('assets_dashboard/css/app-dark.min.css')}}" rel="stylesheet" type="text/css" id="dark-style" />
-
+        <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
     </head>
 
     <body class="loading" data-layout-config='{"leftSideBarTheme":"dark","layoutBoxed":false, "leftSidebarCondensed":false, "leftSidebarScrollable":false,"darkMode":false, "showRightSidebarOnStart": true}'>
@@ -31,20 +31,20 @@
                 <!-- LOGO -->
                 <a href="index.html" class="logo text-center logo-light">
                     <span class="logo-lg">
-                        <img src="{{URL::asset('assets_dashboard/images/logo.png')}}" alt="" height="16">
+                        <img src="{{URL::asset('assets_dashboard/images/full-noor.png')}}" alt="" height="30">
                     </span>
                     <span class="logo-sm">
-                        <img src="{{URL::asset('assets_dashboard/images/logo_sm.png')}}" alt="" height="16">
+                        <img src="{{URL::asset('assets_dashboard/images/full-noor.png')}}" alt="" height="16">
                     </span>
                 </a>
 
                 <!-- LOGO -->
                 <a href="index.html" class="logo text-center logo-dark">
                     <span class="logo-lg">
-                        <img src="{{URL::asset('assets_dashboard/images/logo-dark.png')}}" alt="" height="16">
+                        <img src="{{URL::asset('assets_dashboard/images/full-noor.png')}}" alt="" height="16">
                     </span>
                     <span class="logo-sm">
-                        <img src="{{URL::asset('assets_dashboard/images/logo_sm_dark.png')}}" alt="" height="16">
+                        <img src="{{URL::asset('assets_dashboard/images/full-noor.png')}}" alt="" height="16">
                     </span>
                 </a>
     
@@ -58,7 +58,7 @@
                         <li class="side-nav-item">
                             <a data-bs-toggle="collapse" href="#sidebarDashboards" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
                                 <i class="uil-home-alt"></i>
-                                <span class="badge bg-danger float-end">New</span>
+                                <span class="badge bg-danger float-end"></span>
                                 <span> Dashboards </span>
                             </a>
                           
@@ -75,16 +75,13 @@
                             <div class="collapse" id="sidebarProjects">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="apps-projects-list.html">Post Project</a>
+                                        <a href="/post_project">Post Project <span class="badge rounded-pill badge-success-lighten font-10 float-end">Done</span></a>
                                     </li>
                                     <li>
-                                        <a href="apps-projects-details.html">Post About</a>
+                                        <a href="/post_about">Post About</a>
                                     </li>
                                     <li>
-                                        <a href="apps-projects-gantt.html">Post Visi Misi<span class="badge rounded-pill badge-light-lighten font-10 float-end"></span></a>
-                                    </li>
-                                    <li>
-                                        <a href="apps-projects-add.html">Album <span class="badge rounded-pill badge-success-lighten font-10 float-end">New</span></a>
+                                        <a href="/post_album">Post Album <span class="badge rounded-pill badge-success-lighten font-10 float-end"></span></a>
                                     </li>
                                 </ul>
                             </div>
@@ -226,21 +223,7 @@
                                         <img src="assets_dashboard/images/flags/germany.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">German</span>
                                     </a>
 
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                        <img src="assets_dashboard/images/flags/italy.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Italian</span>
-                                    </a>
-                
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                        <img src="assets_dashboard/images/flags/spain.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Spanish</span>
-                                    </a>
-
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                        <img src="assets_dashboard/images/flags/russia.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Russian</span>
-                                    </a>
-
+                                  
                                 </div>
                             </li>
 
@@ -534,7 +517,7 @@
                                             </a>
                                         </form>
                                     </div>
-                                    <h4 class="page-title">Dashboard</h4>
+                                    <h4 class="page-title">Item Menu</h4>
                                 </div>
                             </div>
                         </div>
@@ -551,7 +534,7 @@
 
 
                 <!-- Footer Start -->
-                <footer class="footer">
+                <!-- <footer class="footer">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-6">
@@ -566,7 +549,7 @@
                             </div>
                         </div>
                     </div>
-                </footer>
+                </footer> -->
                 <!-- end Footer -->
 
             </div>

@@ -12,10 +12,7 @@ class LoginController extends Controller
     public function login (Request $request){
         $cek_account = DB::table('account')->where('email',$request->email)->where('password',$request->password)->count();
         $view_username = DB::table('account')->where('email',$request->email)->get();
-        
 
-
-       
         if($cek_account !=1){
 
             return Redirect()->back()->with('danger', 'Login Gagal ');
@@ -26,7 +23,7 @@ class LoginController extends Controller
                  session(['login_status'=>$username->username])
                 );
             }
-            return view('page_layout.dashboard');
+            return redirect('/dashboard');
             
         }
     }
