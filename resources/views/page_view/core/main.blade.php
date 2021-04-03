@@ -114,7 +114,7 @@
         <div class="slider-wrapper">
           <section class="slider-section">
             <div class="slider-active slick-style">
-              <div class="single-slider img-bg" style="background-image: url('{{URL::asset('assets_view/img/slider/slider-1.jpg')}}')">
+              <div class="single-slider img-bg" style="background-image: url('{{URL::asset('assets_view/img/slider/1.jpeg')}}')">
                 <div class="container">
                   <div class="row">
                     <div class="col-xl-7 col-lg-8 col-md-10">
@@ -129,7 +129,7 @@
                   </div>
                 </div>
               </div>
-              <div class="single-slider img-bg" style="background-image: url('{{URL::asset('assets_view/img/slider/slider-2.jpg')}}')">
+              <div class="single-slider img-bg" style="background-image: url('{{URL::asset('assets_view/img/slider/bg2.jpg')}}')">
                 <div class="container">
                   <div class="row">
                     <div class="col-xl-7 col-lg-8 col-md-10">
@@ -144,7 +144,7 @@
                   </div>
                 </div>
               </div>
-              <div class="single-slider img-bg" style="background-image: url('{{URL::asset('assets_view/img/slider/slider-3.jpg')}}')">
+              <div class="single-slider img-bg" style="background-image: url('{{URL::asset('assets_view/img/slider/3bg.jpeg')}}')">
                 <div class="container">
                   <div class="row">
                     <div class="col-xl-7 col-lg-8 col-md-10">
