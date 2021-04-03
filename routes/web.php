@@ -18,6 +18,21 @@ use App\Http\Controllers\PostController;
 Route::get('/', function () {
     return view('page_view.index');
 });
+Route::get('/about', function () {
+    return view('page_view.about');
+});
+Route::get('/blog', function () {
+    return view('page_view.blog');
+});
+Route::get('/contact', function () {
+    return view('page_view.contact');
+});
+Route::get('/service', function () {
+    return view('page_view.service');
+});
+Route::get('/project', function () {
+    return view('page_view.project');
+});
 Route::get('/login', function () {
     return view('home.login');
 });

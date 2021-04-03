@@ -6,7 +6,7 @@
     <title>@yield('title')</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{URL::asset('assets_view')}}/img/icon-noor.png" />
 
     <link rel="stylesheet" href="{{URL::asset('assets_view')}}/css/bootstrap-5.0.5-alpha.min.css" />
     <link rel="stylesheet" href="{{URL::asset('assets_view')}}/css/LineIcons.2.0.css" />
@@ -75,8 +75,8 @@
               <div class="row">
                 <div class="col-lg-12">
                   <nav class="navbar navbar-expand-lg">
-                    <a class="navbar-brand" href="index.html">
-                      <img src="{{URL::asset('assets_view')}}/img/logo/full-noor.png" alt="Logo" />
+                    <a class="navbar-brand" href="{{url('/')}}">
+                      <img src="{{URL::asset('assets_view')}}/img/noor.svg" alt="Logo" />
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="toggler-icon"></span>
@@ -86,22 +86,22 @@
                     <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                       <ul id="nav" class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                          <a class="active" href=" ">Home</a>
+                          <a class="active" href="{{url('/')}}">Home</a>
                         </li>
-                        <li class="nav-item">
-                          <a href="about.html">About</a>
+                        <li class="nav-item active">
+                          <a href="/about">About</a>
                         </li>
-                        <li class="nav-item">
-                          <a href="service.html">Service</a>
+                        <li class="nav-item active">
+                          <a href="/service">Bussiness Scope</a>
                         </li>
-                        <li class="nav-item">
-                          <a href="team.html">Doctor</a>
+                        <li class="nav-item active">
+                          <a href="/project">Project</a>
                         </li>
-                        <li class="nav-item">
-                          <a href="blog.html">Blog</a>
+                        <li class="nav-item active">
+                          <a href="/blog">Blog</a>
                         </li>
-                        <li class="nav-item">
-                          <a href="#contact">Contact</a>
+                        <li class="nav-item active">
+                          <a href="/contact">Contact</a>
                         </li>
                       </ul>
                     </div>
@@ -114,7 +114,7 @@
         <div class="slider-wrapper">
           <section class="slider-section">
             <div class="slider-active slick-style">
-              <div class="single-slider img-bg" style="background-image: url('{{URL::asset('assets_view/img/slider/slider-1.jpg')}}'')">
+              <div class="single-slider img-bg" style="background-image: url('{{URL::asset('assets_view/img/slider/slider-1.jpg')}}')">
                 <div class="container">
                   <div class="row">
                     <div class="col-xl-7 col-lg-8 col-md-10">
@@ -129,7 +129,7 @@
                   </div>
                 </div>
               </div>
-              <div class="single-slider img-bg" style="background-image: url('{{URL::asset('assets_view/img/slider/slider-2.jpg')}}'')">
+              <div class="single-slider img-bg" style="background-image: url('{{URL::asset('assets_view/img/slider/slider-2.jpg')}}')">
                 <div class="container">
                   <div class="row">
                     <div class="col-xl-7 col-lg-8 col-md-10">
@@ -144,7 +144,7 @@
                   </div>
                 </div>
               </div>
-              <div class="single-slider img-bg" style="background-image: url('{{URL::asset('assets_view/img/slider/slider-3.jpg')}}'')">
+              <div class="single-slider img-bg" style="background-image: url('{{URL::asset('assets_view/img/slider/slider-3.jpg')}}')">
                 <div class="container">
                   <div class="row">
                     <div class="col-xl-7 col-lg-8 col-md-10">
@@ -172,7 +172,7 @@
             <div class="row">
               <div class="col-xl-4 col-lg-5 col-md-6">
                 <div class="footer-widget mb-30">
-                  <a href="index-2.html" class="logo"><img src="{{URL::asset('assets_view')}}/img/logo/logo.svg" alt="" /></a>
+                  <a href="index-2.html" class="logo"><img src="{{URL::asset('assets_view')}}/img/noor.svg" alt="" /></a>
                   <p>Lorem ipsum dolor serit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore dolore magna aliquyam erat diam voluptua.</p>
                   <div class="footer-social-links">
                     <ul>
@@ -199,7 +199,6 @@
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Services</a></li>
-                    <li><a href="#">Doctor</a></li>
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">Contact</a></li>
                   </ul>
@@ -208,28 +207,28 @@
               <div class="col-xl-2 col-lg-3 col-md-5">
                 <div class="footer-widget mb-30">
                   <h4>Quick Link</h4>
-                  <ul class="footer-links">
+                  {{--  <ul class="footer-links">
                     <li><a href="#">Cardiology</a></li>
                     <li><a href="#">Neurology</a></li>
                     <li><a href="#">Gastroenterology</a></li>
                     <li><a href="#">Routine Checkup</a></li>
                     <li><a href="#">Orthopedics</a></li>
                     <li><a href="#">Dental Surgery</a></li>
-                  </ul>
+                  </ul>  --}}
                 </div>
               </div>
               <div class="col-xl-4 col-lg-12 col-md-7">
                 <div class="footer-widget mb-30">
                   <h4>Medical Location</h4>
                   <div class="map-canvas">
-                    <iframe class="map" id="gmap_canvas" src="https://maps.google.com/maps?q=Mission%20District%2C%20San%20Francisco%2C%20CA%2C%20USA&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"></iframe>
+                    <iframe class="map" id="gmap_canvas" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d989.3454987279367!2d112.75881102915858!3d-7.3109120694680945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb017ba883db%3A0x9325f97aacae461c!2sJl.%20Saronojiwo%20I%20No.39%2C%20Panjang%20Jiwo%2C%20Kec.%20Tenggilis%20Mejoyo%2C%20Kota%20SBY%2C%20Jawa%20Timur%2060299!5e0!3m2!1sen!2sid!4v1617466718611!5m2!1sen!2sid"></iframe>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="copyright-area">
-            <p class="mb-0 text-center">Designed and Developed By <a href="https://uideck.com/" rel="nofollow">UIdeck</a></p>
+            <p class="mb-0 text-center">Designed and Developed &copy; <?= date('Y'); ?> By <a href="#" rel="nofollow"><b>PT. Noor Energi Baik</b></a></p>
           </div>
         </div>
       </footer>
@@ -248,6 +247,4 @@
     <script src="{{URL::asset('assets_view')}}/js/glightbox.min.js"></script>
     <script src="{{URL::asset('assets_view')}}/js/main.js"></script>
   </body>
-
-  <!-- Mirrored from preview.uideck.com/items/medic/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Apr 2021 11:24:34 GMT -->
 </html>

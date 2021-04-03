@@ -316,14 +316,14 @@
       <section class="faq-section theme-bg">
         <div class="faq-video-wrapper">
           <div class="faq-video">
-            <img src="assets/img/faq/faq-img.jpg" alt="" />
+            <img src="{{URL::asset('assets_view')}}/img/faq/faq-img.jpg" alt="" />
             <div class="video-btn">
               <a class="popup-video glightbox" href="#"><i class="lni lni-play"></i></a>
             </div>
           </div>
         </div>
         <div class="shape">
-          <img src="assets/img/shapes/shape-8.svg" alt="" class="shape-faq" />
+          <img src="{{URL::asset('assets_view')}}/img/shapes/shape-8.svg" alt="" class="shape-faq" />
         </div>
         <div class="container">
           <div class="row">

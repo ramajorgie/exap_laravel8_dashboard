@@ -1,8 +1,6 @@
 <!DOCTYPE html>
     <html lang="en">
-
-<!-- Mirrored from coderthemes.com/hyper_2/saas/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Apr 2021 10:28:58 GMT -->
-<head>
+    <head>
         <meta charset="utf-8" />
         <title>Noor Dashboard</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
