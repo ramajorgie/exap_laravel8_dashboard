@@ -47,7 +47,7 @@
                         <a href="#"><i class="lni lni-phone"></i> +463281626556</a>
                       </li>
                       <li>
-                        <a href="#"><i class="lni lni-envelope"></i> <span class="__cf_email__" data-cfemail="e78f828b8b888a82838e84a7808a868e8bc984888a">[email&#160;protected]</span></a>
+                        <a href="#"><i class="lni lni-envelope"></i> info@noorenergi.co.id</a>
                       </li>
                     </ul>
                   </div>

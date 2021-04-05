@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PostController;
@@ -37,9 +38,9 @@ use App\Http\Controllers\PostController;
 Route::get('/', function () {
     return view('page_view.index');
 });
-Route::get('/about', function () {
-    return view('page_view.about');
-});
+
+Route::get('/about', [PostController::class,'about']);
+
 Route::get('/blog', function () {
     return view('page_view.blog');
 });

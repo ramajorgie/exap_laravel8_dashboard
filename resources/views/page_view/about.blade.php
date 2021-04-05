@@ -17,8 +17,10 @@
                 <h2 class="mb-15 wow fadeInUp" data-wow-delay=".4s">Welcome to PT. Noor Energi Baik</h2>
               </div>
               <p class="mb-35 wow fadeInUp" data-wow-delay=".6s">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum Stet clita
-                kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sqit consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
+                <?php
+                foreach ($data as $item){
+                  echo $item->isi;
+                }?>
               </p>
               <a href="#" class="btn theme-btn wow fadeInUp" data-wow-delay=".8s">Learn More</a>
             </div>

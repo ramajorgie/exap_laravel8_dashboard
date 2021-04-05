@@ -41,6 +41,12 @@ class PostController extends Controller
         return redirect()->back()->with('success', 'About Berhasil Diperbaruhi');
     }
 
+    public function about()
+    {
+        $data = DB::table('post_about')->get();
+        return view('page_view.about',['data'=>$data]);
+    }
+
     public function post_album(Request $request){
 
         $imageName = time().'.'.$request->file_foto_album->extension();  
