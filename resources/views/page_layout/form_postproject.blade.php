@@ -7,31 +7,38 @@
                                     <div class="card-body">
                                         <form action="/insert_postproject" method="post" enctype="multipart/form-data">
                                         @csrf
+                                        @if ($message = Session::get('success'))
+                                        <div class="alert alert-success alert-block" style="text-align: center;">
+                                            <button type="button" class="close" data-dismiss="alert">×</button>	
+                                            <strong>{{ $message }}</strong>
+                                        </div>
+                                        @endif
+
                                         <div class="row">
                                             <div class="col-xl-6">
                                                 <div class="mb-3">
                                                     <label for="projectname" class="form-label">Judul Project</label>
-                                                    <input type="text" id="projectname" class="form-control" placeholder="Enter project name">
+                                                    <input type="text" id="projectname" name="judul_project" class="form-control" placeholder="Enter project name">
                                                 </div>
 
-                                                <textarea name="editor1" ></textarea>
+                                                <textarea name="isi" ></textarea>
                                                     <script>
-                                                            CKEDITOR.replace( 'editor1' );
+                                                            CKEDITOR.replace( 'isi' );
                                                     </script>
 
-                                                <!-- Date View -->
-                                                <div class="mb-3 position-relative" id="datepicker1">
-                                                    <label class="form-label">Waktu</label>
-                                                    <input type="text" class="form-control" data-provide="datepicker" data-date-container="#datepicker1" data-date-format="d-M-yyyy" data-date-autoclose="true">
+
+                                                <div class="mb-3">
+                                                                <label for="example-date" class="form-label">Waktu</label>
+                                                                <input class="form-control" id="example-date" type="date" name="waktu">
                                                 </div>
                                                 
                                                 <div class="mb-0">
                                                 <label for="project-overview" class="form-label">Bahasa</label>
                                                     
-                                                    <select class="form-control select2" data-toggle="select2">
+                                                    <select class="form-control select2" data-toggle="select2" name="bahasa">
                                                         <option>Select</option>
-                                                        <option value="AZ">Indonesia</option>
-                                                        <option value="CO">English</option>
+                                                        <option value="Indonesia">Indonesia</option>
+                                                        <option value="English">English</option>
                                                     </select>
                                                 </div>
 
@@ -45,7 +52,7 @@
                                                     <div class="dropzone" id="myAwesomeDropzone" data-plugin="dropzone" data-previews-container="#file-previews"
                                                         data-upload-preview-template="#uploadPreviewTemplate">
                                                         <div class="fallback">
-                                                            <input name="file" type="file" />
+                                                            <input name="file_foto" type="file" />
                                                         </div>
 
                                                         <div class="dz-message needsclick">
@@ -99,59 +106,7 @@
                         </div>
                         <!-- end row-->
 
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="card">
-                                    <div class="card-body">
-
-                                        <h4 class="header-title">Daftar Project</h4>
-                                        <p class="text-muted font-14">
-                                            Berikut Ini Merupakan Daftar Dari Project yang dipost
-                                        </p>
-
-                                        <ul class="nav nav-tabs nav-bordered mb-3">
-                                            <li class="nav-item">
-                                                <a href="#responsive-preview" data-bs-toggle="tab" aria-expanded="false" class="nav-link active">
-                                                    List
-                                                </a>
-                                            </li>
-                                        </ul> <!-- end nav-->
-                                        <div class="tab-content">
-                                            <div class="tab-pane show active" id="responsive-preview">
-                                                <div class="table-responsive">
-                                                    <table class="table mb-0">
-                                                        <thead>
-                                                            <tr>
-                                                                <th scope="col">#</th>
-                                                                <th scope="col">Heading</th>
-                                                                <th scope="col">Heading</th>
-                                                                <th scope="col">Heading</th>
-                                                                <th scope="col">Heading</th>
-                                                                <th scope="col">Heading</th>
-                                                                <th scope="col">Heading</th>
-                                                                <th scope="col">Heading</th>
-                                                                <th scope="col">Heading</th>
-                                                                <th scope="col">Heading</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <th scope="row">1</th>
-                                                                <td>Cell</td>
-                                                                <td>Cell</td>
-                                                                <td>Cell</td>
-                                                                <td>Cell</td>
-                                                                <td>Cell</td>
-                                                                <td>Cell</td>
-                                                                <td>Cell</td>
-                                                                <td>Cell</td>
-                                                                <td>Cell</td>
-                                                            </tr>
-                                                          
-                                                        </tbody>
-                                                    </table>
-                                                </div> <!-- end table-responsive-->                     
-                                            </div> <!-- end preview-->
+                       
                                         
                                          
                                         </div> <!-- end tab-content-->

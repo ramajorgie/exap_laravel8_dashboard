@@ -1,29 +1,33 @@
 @extends('page_core.app')  
    <!-- partial -->
    @section('konten')
-   <div class="row">
+                     <div class="row">
                             <div class="col-12">
                                 <div class="card">
+                                
                                     <div class="card-body">
+                                    <form action="/insert_postalbum" method="post" enctype="multipart/form-data">
+                                    @csrf
+                                    <div class="mb-3">
+                                                    <label for="projectname" class="form-label header-title m-t-0">Judul Album </label>
+                                                    <input type="text" id="projectname" name="judul_album" class="form-control" placeholder="Enter name">
+                                        </div>
                                         <h4 class="header-title m-t-0">Dropzone File Upload</h4>
-                                        <p class="text-muted font-14">
-                                            DropzoneJS is an open source library that provides drag’n’drop file uploads with image previews.
-                                        </p>
 
                                         <ul class="nav nav-tabs nav-bordered mb-3">
                                             <li class="nav-item">
                                                 <a href="#file-upload-preview" data-bs-toggle="tab" aria-expanded="false" class="nav-link active">
-                                                    Preview
+                                                    Album
                                                 </a>
                                             </li>
 
                                         </ul> <!-- end nav-->
                                         <div class="tab-content">
                                             <div class="tab-pane show active" id="file-upload-preview">
-                                                <form action="https://coderthemes.com/" method="post" class="dropzone" id="myAwesomeDropzone" data-plugin="dropzone" data-previews-container="#file-previews"
+                                                <div  class="dropzone" id="myAwesomeDropzone" data-plugin="dropzone" data-previews-container="#file-previews"
                                                     data-upload-preview-template="#uploadPreviewTemplate">
                                                     <div class="fallback">
-                                                        <input name="file" type="file" multiple />
+                                                        <input name="file_foto_album" type="file" multiple />
                                                     </div>
 
                                                     <div class="dz-message needsclick">
@@ -32,7 +36,7 @@
                                                         <span class="text-muted font-13">(This is just a demo dropzone. Selected files are
                                                             <strong>not</strong> actually uploaded.)</span>
                                                     </div>
-                                                </form>
+                                                </div>
 
                                                 <!-- Preview -->
                                                 <div class="dropzone-previews mt-3" id="file-previews"></div>                                         
@@ -96,6 +100,11 @@
                                                 </pre> <!-- end highlight-->
                                             </div> <!-- end preview code-->
                                         </div> <!-- end tab-content-->
+
+                                        <div style="text-align: center;">
+                                        <button class="btn btn-success">Upload</button>
+                                        </div>
+                                        <form>
 
                                         
                                     </div>
