@@ -70,6 +70,8 @@ Route::get('/post_album', function () {
 
 
 Route::post('/auth', [LoginController::class, 'login']);
+
 Route::post('/insert_postproject',[PostController::class, 'post_project']);
 Route::post('/insert_postabout',[PostController::class, 'post_about']);
 Route::post('/insert_postalbum',[PostController::class, 'post_album']);
+Route::post('/insert_postproject',[PostController::class, 'post_project']);

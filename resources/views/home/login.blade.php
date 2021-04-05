@@ -31,7 +31,7 @@
         <div class="login-box-body">
             <p class="login-box-msg"> <img style="width: 100%;"
             
-                    src="{{URL::asset('/assets_login/images/full-noor.png')}}"></p>
+                    src="{{URL::asset('/assets_login/images/noor.svg')}}"></p>
             <hr />
             @if ($message = Session::get('danger'))
             <div class="alert alert-danger alert-block" style="text-align: center;">

@@ -1,8 +1,6 @@
 <!DOCTYPE html>
     <html lang="en">
-
-<!-- Mirrored from coderthemes.com/hyper_2/saas/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Apr 2021 10:28:58 GMT -->
-<head>
+    <head>
         <meta charset="utf-8" />
         <title>Noor Dashboard</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,20 +30,20 @@
                 <!-- LOGO -->
                 <a href="index.html" class="logo text-center logo-light">
                     <span class="logo-lg">
-                        <img src="{{URL::asset('assets_dashboard/images/full-noor.png')}}" alt="" height="30">
+                        <img src="{{URL::asset('assets_dashboard/images/noor.svg')}}" alt="" height="30">
                     </span>
                     <span class="logo-sm">
-                        <img src="{{URL::asset('assets_dashboard/images/full-noor.png')}}" alt="" height="16">
+                        <img src="{{URL::asset('assets_dashboard/images/noor.svg')}}" alt="" height="16">
                     </span>
                 </a>
 
                 <!-- LOGO -->
                 <a href="index.html" class="logo text-center logo-dark">
                     <span class="logo-lg">
-                        <img src="{{URL::asset('assets_dashboard/images/full-noor.png')}}" alt="" height="16">
+                        <img src="{{URL::asset('assets_dashboard/images/noor.svg')}}" alt="" height="16">
                     </span>
                     <span class="logo-sm">
-                        <img src="{{URL::asset('assets_dashboard/images/full-noor.png')}}" alt="" height="16">
+                        <img src="{{URL::asset('assets_dashboard/images/noor.svg')}}" alt="" height="16">
                     </span>
                 </a>
     
