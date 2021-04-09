@@ -317,11 +317,10 @@
         <div class="faq-video-wrapper">
           <div class="faq-video">
             {{--  <img src="{{URL::asset('assets_view')}}/img/faq/faq-img.jpg" alt="" />  --}}
-            <iframe src="https://www.youtube.com/watch?v=PjCzlNXDvp4">
-            </iframe>
-            <div class="video-btn">
+            <iframe width="420" height="345" src="https://www.youtube.com/embed/PjCzlNXDvp4"></iframe>
+            {{--  <div class="video-btn">
               <a class="popup-video glightbox" href="#"><i class="lni lni-play"></i></a>
-            </div>
+            </div>  --}}
           </div>
         </div>
         <div class="shape">
