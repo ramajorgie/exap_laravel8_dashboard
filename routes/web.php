@@ -53,7 +53,8 @@ Route::get('/post_album', function () {
 
 
 Route::post('login', [LoginController::class, 'login'])->name('login');
-// Route::post('login', 'LoginController@login')->name('login');
+Route::get('logout', [LoginController::class, 'logout'])->name('logout');
+// Route::get('logout', 'LoginController@logout')->name('logout');
 
 Route::post('/insert_postproject',[PostController::class, 'post_project']);
 Route::post('/insert_postabout',[PostController::class, 'post_about']);
