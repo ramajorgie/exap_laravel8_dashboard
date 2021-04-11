@@ -28,6 +28,7 @@ class LoginController extends Controller
                     );
                     session(['login_status'=>$username->name]);
                 }
+                    session(['berhasil_login' => true]);
                     return redirect('/dashboard');  
             }
             else{
