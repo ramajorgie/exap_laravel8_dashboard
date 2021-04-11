@@ -16,24 +16,6 @@ use App\Http\Controllers\PostController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('home.login');
-// });
-// // Route::get('/app', function () {
-// //     return view('page_core.app');
-// // });
-// Route::get('/dashboard', function () {
-//     return view('page_layout.dashboard');
-// });
-// Route::get('/post_project', function () {
-//     return view('page_layout.form_postproject');
-// });
-// Route::get('/post_about', function () {
-//     return view('page_layout.form_postabout');
-// });
-// Route::get('/post_album', function () {
-//     return view('page_layout.form_postalbum');
-// });
 
 Route::get('/', function () {
     return view('page_view.index');
