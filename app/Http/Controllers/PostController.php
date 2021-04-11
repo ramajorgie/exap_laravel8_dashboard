@@ -24,6 +24,7 @@ class PostController extends Controller
         $post_project->waktu                = $request->input('waktu');
         $post_project->bahasa               = $request->input('bahasa');
         $post_project->foto                 = $imageName;
+        $post_project->status               = 'Sembunyikan';
         $post_project->save();
         
         return redirect()->back()->with('success', 'Post Berhasil Ditambah');

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ListController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PostController;
@@ -60,3 +61,6 @@ Route::post('/insert_postproject',[PostController::class, 'post_project']);
 Route::post('/insert_postabout',[PostController::class, 'post_about']);
 Route::post('/insert_postalbum',[PostController::class, 'post_album']);
 Route::post('/insert_postproject',[PostController::class, 'post_project']);
+
+
+Route::get('/view_post',[ListController::class, 'list_project']);

@@ -97,7 +97,7 @@
                             <div class="collapse" id="sidebarEcommerce">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="apps-ecommerce-products.html">List Project</a>
+                                        <a href="/view_post">List Project</a>
                                     </li>
                                     <li>
                                         <a href="apps-ecommerce-products.html">List Album</a>

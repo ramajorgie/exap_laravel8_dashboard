@@ -30,28 +30,37 @@
                                                 <table id="scroll-vertical-datatable" class="table dt-responsive nowrap">
                                                     <thead>
                                                         <tr>
-                                                            <th>Name</th>
-                                                            <th>Position</th>
-                                                            <th>Office</th>
-                                                            <th>Age</th>
-                                                            <th>Start date</th>
-                                                            <th>Salary</th>
+                                                            <th>Judul Project</th>
+                                                            <th>Isi</th>
+                                                            <th>Waktu</th>
+                                                            <th>Bahasa</th>
+                                                            <th>Foto</th>
+                                                            <th>Status</th>
+                                                            <th>Opt</th>
                                                         </tr>
                                                     </thead>
                                                 
-                                                
+                                                @foreach ($list_project as $list)
                                                     <tbody>
                                                         <tr>
-                                                            <td>Tiger Nixon</td>
-                                                            <td>System Architect</td>
-                                                            <td>Edinburgh</td>
-                                                            <td>61</td>
-                                                            <td>2011/04/25</td>
-                                                            <td>$320,800</td>
+                                                            <td>{{$list->judul_project}}</td>
+                                                            <td>{{$list->isi}}</td>
+                                                            <td>{{$list->waktu}}</td>
+                                                            <td>{{$list->bahasa}}</td>
+                                                            <td>{{$list->foto}}</td>
+                                                            <td>{{$list->status}}</td>
+                                                            <td>
+                                                            @if ( $list->status == "Tampilkan")
+                                                            <button class="btn btn-danger">Close</button>
+                                                            @elseif ( $list->status == "Sembunyikan")
+                                                            <button class="btn btn-success">Open</button>
+                                                            @endif
+                                                            </td>
                                                         </tr>
                                                        
 
                                                     </tbody>
+                                                    @endforeach
                                                 </table>                     
                                             </div> <!-- end preview-->
                                         
