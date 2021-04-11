@@ -43,7 +43,8 @@ Route::get('/login', function () {
 
 Route::post('login', [LoginController::class, 'login'])->name('login');
 
-Route::group(['middleware' => 'CekLoginMiddleware'], function() {
+// Route::group(['middleware' => 'CekLoginMiddleware'], function() {
+Route::group(['middleware' => 'auth'], function() {
     Route::get('/post_project', function () {return view('page_layout.form_postproject');});
     Route::get('/post_about', function () {return view('page_layout.form_postabout');});
     Route::get('/post_album', function () {return view('page_layout.form_postalbum');});
