@@ -13,32 +13,29 @@ use App\Models\User;
 class LoginController extends Controller
 {
     public function login (Request $request){
-        // $cek_account = DB::table('account')->where('email',$request->email)->where('password',$request->password)->count();
-        // $view_username = DB::table('account')->where('email',$request->email)->get();
-
-        // if($cek_account !=1){
-
-        //     return Redirect()->back()->with('danger', 'Login Gagal ');
-        // }
-        // else{
-        //     foreach($view_username as $username){
-        //          $data= array(
-        //          session(['login_status'=>$username->username])
-        //         );
-        //     }
-        //     return redirect('/dashboard');
-            
-        // }
-        $data = User::where('email',$request->email)->firstOrfail();
-        if ($data){
-            if(Hash::check($request->password, $data->password)){
-                return redirect('/dashboard');
-            }
+        
+        $cek_account_email = DB::table('users')->where('email',$request->email)->count();
+        $cek_account_password = User::where('email',$request->email)->count();
+        if($cek_account_email !=1 ){
+            return Redirect()->back()->with('danger', 'Email Salah ');
+        }       
+        elseif($cek_account_email !=0){
+            $view_username = DB::table('users')->where('email',$request->email)->get();
+            $cek_account_password = User::where('email',$request->email)->firstOrfail();
+            if (Hash::check($request->password, $cek_account_password->password)){  
+                foreach($view_username as $username){
+                    $data= array(
+                   );
+                   session(['login_status'=>$username->name]);
+               }
+                return redirect('/dashboard');  
         }
-        return Redirect('/login')->back()->with('danger', 'Email/Password Salah');
+        else{
+        return Redirect()->back()->with('danger', 'Password Salah ');
+        }
     }
 
-    // public function register (){
-    //     return view('page_layout.register');
-    // }
+       
+       
+    }
 }

@@ -39,7 +39,7 @@
                 <strong>{{ $message }}</strong>
             </div>
             @endif
-            <form action="{{ route('login') }}" method="post">
+            <form action="/login" method="post">
             @csrf
                 <div class="form-group has-feedback">
                     <input type="text" name="email" class="form-control" placeholder="Email" required>
