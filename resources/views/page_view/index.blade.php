@@ -317,7 +317,7 @@
         <div class="faq-video-wrapper">
           <div class="faq-video">
             {{--  <img src="{{URL::asset('assets_view')}}/img/faq/faq-img.jpg" alt="" />  --}}
-            <iframe width="420" height="345" src="https://www.youtube.com/embed/PjCzlNXDvp4"></iframe>
+            <iframe width="420" height="345" src="https://www.youtube.com/embed/d2d7ucCBS1E"></iframe>
             {{--  <div class="video-btn">
               <a class="popup-video glightbox" href="#"><i class="lni lni-play"></i></a>
             </div>  --}}

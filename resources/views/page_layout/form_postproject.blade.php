@@ -8,11 +8,7 @@
                                         <form action="/insert_postproject" method="post" enctype="multipart/form-data">
                                         @csrf
                                         @if ($message = Session::get('success'))
-                                        {{--  <div class="alert alert-success alert-block" style="text-align: center;">
-                                            <button type="button" class="close" data-dismiss="alert">×</button>	
-                                            <strong>{{ $message }}</strong>
-                                        </div>  --}}
-                                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                        <div style="text-align: center" class="alert alert-success alert-dismissible fade show" role="alert">
                                             <strong>{{ $message }}</strong>
                                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                           </div>

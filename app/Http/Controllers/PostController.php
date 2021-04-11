@@ -58,6 +58,6 @@ class PostController extends Controller
         $post_album->status               = 'Tampilkan';
         $post_album->save();
         
-        return redirect()->back()->with('success', 'Album Berhasil Ditambahh!');
+        return redirect()->back()->with('success', 'Album Berhasil Ditambah!');
     }
 }

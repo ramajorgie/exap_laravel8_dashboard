@@ -15,10 +15,10 @@
                                         <form action="/insert_postabout" method="post" enctype="multipart/form-data">
                                         @csrf
                                         @if ($message = Session::get('success'))
-                                        <div class="alert alert-success alert-block" style="text-align: center;">
-                                            <button type="button" class="close" data-dismiss="alert">×</button>	
+                                        <div style="text-align: center" class="alert alert-success alert-dismissible fade show" role="alert">
                                             <strong>{{ $message }}</strong>
-                                        </div>
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                          </div>
                                         @endif
                                         <div class="mb-3">
                                                     <label for="projectname" class="form-label">Judul Bio </label>

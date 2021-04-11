@@ -8,6 +8,12 @@
                                     <div class="card-body">
                                     <form action="/insert_postalbum" method="post" enctype="multipart/form-data">
                                     @csrf
+                                    @if ($message = Session::get('success'))
+                                        <div style="text-align: center" class="alert alert-success alert-dismissible fade show" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                          </div>
+                                        @endif
                                     <div class="mb-3">
                                                     <label for="projectname" class="form-label header-title m-t-0">Judul Album </label>
                                                     <input type="text" id="projectname" name="judul_album" class="form-control" placeholder="Enter name">
