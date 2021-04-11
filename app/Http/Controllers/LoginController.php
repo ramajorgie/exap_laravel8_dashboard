@@ -23,19 +23,20 @@ class LoginController extends Controller
             $view_username = DB::table('users')->where('email',$request->email)->get();
             $cek_account_password = User::where('email',$request->email)->firstOrfail();
             if (Hash::check($request->password, $cek_account_password->password)){  
-                foreach($view_username as $username){
-                    $data= array(
-                   );
-                   session(['login_status'=>$username->name]);
-               }
-                return redirect('/dashboard');  
-        }
-        else{
-        return Redirect()->back()->with('danger', 'Password Salah ');
+                    foreach($view_username as $username){
+                        $data= array(
+                    );
+                    session(['login_status'=>$username->name]);
+                }
+                    return redirect('/dashboard');  
+            }
+            else{
+            return Redirect()->back()->with('danger', 'Password Salah ');
+            }
         }
     }
-
-       
-       
+    public function logout (Request $request){
+        $request->session()->flush();
+        return redirect('/');
     }
 }
