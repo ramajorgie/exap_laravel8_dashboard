@@ -249,14 +249,14 @@
                                         <img src="assets_dashboard/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
                                     </span>
                                     <span>
-                                        <span class="account-user-name">{{ session()->get('login_status') }}</span>
-                                        <span class="account-position">*Aktif</span>
+                                        <span style="color: black" class="account-user-name">{{ Auth::user()->name }}</span>
+                                        <span style="color: green" class="account-position">*Aktif</span>
                                     </span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu profile-dropdown">
                                     <!-- item-->
                                     <div class=" dropdown-header noti-title">
-                                        <h6 class="text-overflow m-0">Welcome !</h6>
+                                        <h6 class="text-overflow m-0">Welcome {{ Auth::user()->name }}</h6>
                                     </div>
 
                                     <!-- item-->

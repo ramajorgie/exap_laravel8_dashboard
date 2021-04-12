@@ -1,6 +1,6 @@
-@extends('page_view/core/main')
+@extends('page_view/sub_core/main')
 
-@section('title','About')
+@section('title','Project')
 
 @section('container')
     <section id="" class="team-section pt-150 pb-150">

@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="{{URL::asset('assets_view')}}/css/main.css" />
   </head>
   <body>
-      <div class="preloader">
+      {{--  <div class="preloader">
         <div class="loader">
           <div class="ytp-spinner">
             <div class="ytp-spinner-container">
@@ -33,7 +33,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div>  --}}
 
       <header id="home" class="header">
         <div class="header-wrapper">
@@ -111,7 +111,7 @@
             </div>
           </div>
         </div>
-        <div class="slider-wrapper">
+        {{--  <div class="slider-wrapper">
           <section class="slider-section">
             <div class="slider-active slick-style">
               <div class="single-slider img-bg" style="background-image: url('{{URL::asset('assets_view/img/slider/1.jpeg')}}')">
@@ -161,7 +161,26 @@
               </div>
             </div>
           </section>
-        </div>
+        </div>  --}}
+        <section class="page-banner-section pt-25 pb-25 img-bg faq-section theme-bg" style="background-image: url('{{URL::asset('assets_view/img/shapes/shape-8.svg')}}')">
+          <div class="container">
+              <div class="row">
+                  <div class="col-xl-12">
+                      <div class="banner-content">
+                          <h2 class="text-white">@yield('title')</h2>
+                          <div class="page-breadcrumb">
+                              <nav aria-label="breadcrumb">
+                                  <ol class="breadcrumb">
+                                      <li class="breadcrumb-item" aria-current="page"><a href="{{url('/')}}">Home</a></li>
+                                      <li class="breadcrumb-item active" aria-current="page">@yield('title')</li>
+                                  </ol>
+                              </nav>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
       </header>
 
       @yield('container')

@@ -1,4 +1,4 @@
-@extends('page_view/core/main')
+@extends('page_view/sub_core/main')
 
 @section('title','About')
 

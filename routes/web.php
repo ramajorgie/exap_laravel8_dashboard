@@ -36,26 +36,13 @@ Route::get('/service', function () {
 Route::get('/project', function () {
     return view('page_view.project');
 });
+
+
 Route::get('/login', function () {
     return view('home.login');
 });
-Route::get('/dashboard', function () {
-    return view('page_layout.dashboard');
-});
-Route::get('/post_project', function () {
-    return view('page_layout.form_postproject');
-});
-Route::get('/post_about', function () {
-    return view('page_layout.form_postabout');
-});
-Route::get('/post_album', function () {
-    return view('page_layout.form_postalbum');
-});
-
 
 Route::post('login', [LoginController::class, 'login'])->name('login');
-Route::get('logout', [LoginController::class, 'logout'])->name('logout');
-// Route::get('logout', 'LoginController@logout')->name('logout');
 
 Route::post('/insert_postproject',[PostController::class, 'post_project']);
 Route::post('/insert_postabout',[PostController::class, 'post_about']);
@@ -64,3 +51,16 @@ Route::post('/insert_postproject',[PostController::class, 'post_project']);
 
 
 Route::get('/view_post',[ListController::class, 'list_project']);
+
+// Route::group(['middleware' => 'CekLoginMiddleware'], function() {
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('/post_project', function () {return view('page_layout.form_postproject');});
+    Route::get('/post_about', function () {return view('page_layout.form_postabout');});
+    Route::get('/post_album', function () {return view('page_layout.form_postalbum');});
+    Route::get('/dashboard', function () {return view('page_layout.dashboard');});
+    Route::post('/insert_postproject',[PostController::class, 'post_project']);
+    Route::post('/insert_postabout',[PostController::class, 'post_about']);
+    Route::post('/insert_postalbum',[PostController::class, 'post_album']);
+    Route::post('/insert_postproject',[PostController::class, 'post_project']);
+    Route::get('logout', [LoginController::class, 'logout'])->name('logout');
+});
