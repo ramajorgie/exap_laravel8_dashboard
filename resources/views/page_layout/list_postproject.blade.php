@@ -67,7 +67,7 @@
                                                     @endforeach
                                                 </table>                     
                                             </div> <!-- end preview-->
-                                        
+
                                                 </pre> <!-- end highlight-->
                                             </div> <!-- end preview code-->
                                         </div> <!-- end tab-content-->
