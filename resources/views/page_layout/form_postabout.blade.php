@@ -20,22 +20,26 @@
                                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                           </div>
                                         @endif
+
+                                        @foreach ($data as $tampilkan)
                                         <div class="mb-3">
                                                     <label for="projectname" class="form-label">Judul Bio </label>
-                                                    <input type="text" id="projectname" name="judul_about" class="form-control" placeholder="Enter project name">
+                                                    <input type="text" id="projectname" name="judul_about" class="form-control" value="{{$tampilkan->judul_about}}">
                                         </div>
                                         <div class="mb-3">
                                         <label for="project-overview" class="form-label">Bahasa</label>
                                                     
-                                                    <select class="form-control select2" data-toggle="select2" name="bahasa">
-                                                        <option>Select</option>
+                                                    <select class="form-control select2" data-toggle="select2"  name="bahasa">
+                                                        @if ( $tampilkan -> bahasa == 'Indonesia')
                                                         <option value="Indonesia">Indonesia</option>
+                                                        @elseif ( $tampilkan -> bahasa == 'English' )
                                                         <option value="English">English</option>
+                                                        @endif
                                                     </select>
                                         </div>
 
                                         <div class="tab-content">
-                                              <textarea name="isi_about" ></textarea>
+                                              <textarea name="isi_about" >{{$tampilkan->isi}}</textarea>
                                                 <script>
                                                         CKEDITOR.replace( 'isi_about' );
                                                 </script>
@@ -43,6 +47,7 @@
                                                 <button class="btn btn-success" type="submit">Simpan</button>
                                                 </div>
                                         </form>
+                                        @endforeach
                                                                         
                                                         
                                        </div> <!-- end col -->
