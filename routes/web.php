@@ -51,6 +51,9 @@ Route::post('/insert_postproject',[PostController::class, 'post_project']);
 
 
 Route::get('/view_post',[ListController::class, 'list_project']);
+Route::post('/update_tampilan_project',[ListController::class, 'update_view_project']);
+Route::post('/lihat_project',[ListController::class, 'view_project']);
+
 
 // Route::group(['middleware' => 'CekLoginMiddleware'], function() {
 Route::group(['middleware' => 'auth'], function() {

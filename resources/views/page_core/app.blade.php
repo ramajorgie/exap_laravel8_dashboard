@@ -9,6 +9,7 @@
 
         <!-- App favicon -->
         <link rel="shortcut icon" href="assets_dashboard/images/favicon.ico">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
         <!-- third party css -->
         <link href="{{URL::asset('assets_dashboard/css/vendor/jquery-jvectormap-1.2.2.css')}}" rel="stylesheet" type="text/css" />
