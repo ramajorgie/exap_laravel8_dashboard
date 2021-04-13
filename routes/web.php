@@ -57,11 +57,13 @@ Route::post('/update_tampilan_project',[ListController::class, 'update_view_proj
 Route::post('/lihat_project',[ListController::class, 'view_project']);
 Route::get('/hapus_project/{id}',[DeleteController::class, 'detele_project']);
 
+Route::get('/post_about',[PostController::class, 'view_about']);
+
 
 // Route::group(['middleware' => 'CekLoginMiddleware'], function() {
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/post_project', function () {return view('page_layout.form_postproject');});
-    Route::get('/post_about', function () {return view('page_layout.form_postabout');});
+    // Route::get('/post_about', function () {return view('page_layout.form_postabout');});
     Route::get('/post_album', function () {return view('page_layout.form_postalbum');});
     Route::get('/dashboard', function () {return view('page_layout.dashboard');});
     Route::post('/insert_postproject',[PostController::class, 'post_project']);

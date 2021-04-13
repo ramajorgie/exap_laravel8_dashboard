@@ -32,18 +32,27 @@ class PostController extends Controller
 
     public function post_about(Request $request){
 
-        $post_about                       = new PostAbout_Model;
-        $post_about->judul_about          = $request->input('judul_about');
-        $post_about->isi                  = $request->input('isi_about');
-        $post_about->waktu                = date('Y-m-d'); ;
-        $post_about->bahasa               = $request->input('bahasa');
-        $post_about->save();
+
+        DB::table('post_about')->where('bahasa',$request->bahasa)
+        ->update([
+         'judul_about' => $request->input('judul_about'),
+         'isi'         => $request->input('isi_about'),
+         'waktu'       => date('Y-m-d'),
+         'bahasa'      => $request->input('bahasa'),
+         ]);
+
+        // $post_about                       = new PostAbout_Model;
+        // $post_about->judul_about          = $request->input('judul_about');
+        // $post_about->isi                  = $request->input('isi_about');
+        // $post_about->waktu                = date('Y-m-d'); ;
+        // $post_about->bahasa               = $request->input('bahasa');
+        // $post_about->save();
         
         return redirect()->back()->with('success', 'About Berhasil Diperbaruhi');
     }
 
     public function about()
-    {
+    {   
         $data = DB::table('post_about')->get();
         return view('page_view.about',['data'=>$data]);
     }
@@ -61,4 +70,11 @@ class PostController extends Controller
         
         return redirect()->back()->with('success', 'Album Berhasil Ditambah!');
     }
+
+    public function view_about()
+    {   
+        $data = DB::table('post_about')->get();
+        return view('page_layout.form_postabout',['data'=>$data]);
+    }
+
 }
