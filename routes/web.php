@@ -1,10 +1,12 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\DeleteController;
 use App\Http\Controllers\ListController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PostController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -53,6 +55,7 @@ Route::post('/insert_postproject',[PostController::class, 'post_project']);
 Route::get('/view_post',[ListController::class, 'list_project']);
 Route::post('/update_tampilan_project',[ListController::class, 'update_view_project']);
 Route::post('/lihat_project',[ListController::class, 'view_project']);
+Route::get('/hapus_project/{id}',[DeleteController::class, 'detele_project']);
 
 
 // Route::group(['middleware' => 'CekLoginMiddleware'], function() {

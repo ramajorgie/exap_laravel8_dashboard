@@ -24,7 +24,8 @@
                                                             <th>Bahasa</th>
                                                             <th>Foto</th>
                                                             <th>Status</th>
-                                                            <th>Opt</th>
+                                                            <th>Action</th>
+                                                            <th>Hapus</th>
                                                         </tr>
                                                     </thead>
                                                 
@@ -57,6 +58,7 @@
                                                             <button class="btn btn-success" type="submit">Open</button>
                                                             </form>
                                                             @endif
+                                                            <td> <a href="/hapus_project/{{ $list->id}}" class="delete"><i class="material-icons " style="color: red;" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
                                                             </td>
                                                         </tr>
                                                        

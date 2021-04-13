@@ -35,6 +35,5 @@ class ListController extends Controller
         $view_isi = DB::table('post_project')->where('id',$request->id)->get();
         return view('page_views.view_project',['view_project' => $view_isi]);
 
-
     }
 }
