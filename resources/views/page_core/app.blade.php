@@ -78,7 +78,7 @@
                                         <a href="/post_project">Post Project <span class="badge rounded-pill badge-success-lighten font-10 float-end">Done</span></a>
                                     </li>
                                     <li>
-                                        <a href="/post_about">Post About<span class="badge rounded-pill badge-success-lighten font-10 float-end">Done</span></a>
+                                        <a href="/lihat_about">Post About<span class="badge rounded-pill badge-success-lighten font-10 float-end">Done</span></a>
                                     </li>
                                     <li>
                                         <a href="/post_album">Post Album <span class="badge rounded-pill badge-success-lighten font-10 float-end">Done</span></span></a>
@@ -290,6 +290,11 @@
                                         <span>Logout</span>
                                     </a>
                                 </div>
+                            </li>
+                            <li class="notification-list">
+                                <a target="_blank" class="nav-link" href="/">
+                                    <i class="dripicons-web noti-icon"></i>
+                                </a>
                             </li>
 
                         </ul>

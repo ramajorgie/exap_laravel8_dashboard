@@ -36,4 +36,9 @@ class ListController extends Controller
         return view('page_views.view_project',['view_project' => $view_isi]);
 
     }
+
+    public function view_about(Request $request){
+        $view_isi_about = DB::table('post_about')->where('id',$request->id)->get();
+        return view('page_views.view_about',['view_about' => $view_isi_about]);
+    }
 }
