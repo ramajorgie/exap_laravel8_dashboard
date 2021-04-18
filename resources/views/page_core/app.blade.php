@@ -122,7 +122,7 @@
                                 </ul>
                             </div>
                         </li>
-
+                        @if ( session()->get('login_status') == 'Super Admin')
                         <li class="side-nav-item">
                             <a data-bs-toggle="collapse" href="#sidebarEmail" aria-expanded="false" aria-controls="sidebarEmail" class="side-nav-link">
                                 <i class="uil-envelope"></i>
@@ -132,14 +132,15 @@
                             <div class="collapse" id="sidebarEmail">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="#">Add Account</a>
+                                        <a href="/account">Members</a>
                                     </li>
-                                    <li>
+                                    <!-- <li>
                                         <a href="#">List Accounts</a>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </div>
                         </li>
+                        @endif
 
                         <li class="side-nav-item">
                             <a href="#" class="side-nav-link">
@@ -218,7 +219,7 @@
                                     </span>
                                     <span>
                                         <span style="color: black" class="account-user-name">{{ Auth::user()->name }}</span>
-                                        <span style="color: green" class="account-position">*Aktif</span>
+                                        <span style="color: green" class="account-position">{{session()->get('login_status')}}</span>
                                     </span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu profile-dropdown">

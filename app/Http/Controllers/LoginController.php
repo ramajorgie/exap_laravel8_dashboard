@@ -23,12 +23,16 @@ class LoginController extends Controller
         // elseif($cek_account_email !=0){
         //     $view_username = DB::table('users')->where('email',$request->email)->get();
         //     $cek_account_password = User::where('email',$request->email)->firstOrfail();
+
         //     if (Hash::check($request->password, $cek_account_password->password)){  
-        //             foreach($view_username as $username){
+        //             foreach($view_username as $username)
+        //             {
         //                 $data= array(
         //             );
-        //             session(['login_status'=>$username->name]);
-        //         }
+        //             session(['login_status'=>$username->status]);
+                  
+        //             }
+
         //             session(['berhasil_login' => true]);
         //             return redirect('/dashboard');  
         //     }
@@ -36,7 +40,14 @@ class LoginController extends Controller
         //     return Redirect()->back()->with('danger', 'Password Salah ');
         //     }
         // }
+         $view_username = DB::table('users')->where('email',$request->email)->get();
         if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
+            foreach($view_username as $username)
+                        {
+                            $data= array(
+                        );
+                        session(['login_status'=>$username->status]);
+                    }
             return redirect('/dashboard');
         }
         return redirect('/login')->with('danger', 'Email/Password Salah ');
@@ -46,4 +57,7 @@ class LoginController extends Controller
         Auth::logout();
         return redirect('/');
     }
+
+
+    
 }

@@ -1,11 +1,13 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\AccountController;
 use App\Http\Controllers\DeleteController;
 use App\Http\Controllers\ListController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PostController;
+
 
 
 /*
@@ -40,6 +42,8 @@ Route::get('/project', function () {
 });
 
 
+
+
 Route::get('/login', function () {
     return view('home.login');
 });
@@ -56,8 +60,16 @@ Route::get('/view_post',[ListController::class, 'list_project']);
 Route::post('/update_tampilan_project',[ListController::class, 'update_view_project']);
 Route::post('/lihat_project',[ListController::class, 'view_project']);
 Route::get('/hapus_project/{id}',[DeleteController::class, 'detele_project']);
+Route::get('/delete_account/{id}',[DeleteController::class, 'detele_account']);
 
 Route::get('/post_about',[PostController::class, 'view_about']);
+
+
+Route::post('/user_add',[AccountController::class, 'add_account']);
+
+Route::get('/account',[AccountController::class, 'view_account']);
+
+Route::post('/update_status',[AccountController::class, 'update_user_status']);
 
 
 // Route::group(['middleware' => 'CekLoginMiddleware'], function() {
@@ -71,4 +83,8 @@ Route::group(['middleware' => 'auth'], function() {
     Route::post('/insert_postalbum',[PostController::class, 'post_album']);
     Route::post('/insert_postproject',[PostController::class, 'post_project']);
     Route::get('logout', [LoginController::class, 'logout'])->name('logout');
+
+
+
+
 });

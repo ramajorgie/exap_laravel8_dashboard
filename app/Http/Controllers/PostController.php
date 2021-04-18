@@ -72,8 +72,7 @@ class PostController extends Controller
     }
 
     public function view_about()
-    {   
-        
+    {      
         $data = DB::table('post_about')->get();
         return view('page_layout.form_postabout',['data'=>$data]);
     }

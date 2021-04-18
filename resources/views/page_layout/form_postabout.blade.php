@@ -22,6 +22,7 @@
                                         @endif
 
                                         @foreach ($data as $tampilkan)
+                                          
                                         <div class="mb-3">
                                                     <label for="projectname" class="form-label">Judul Bio </label>
                                                     <input type="text" id="projectname" name="judul_about" class="form-control" value="{{$tampilkan->judul_about}}">

@@ -12,4 +12,11 @@ class DeleteController extends Controller
         DB::table('post_project')->where('id', '=', $request->id)->delete();
         return redirect()->back();
     }
+
+    public function detele_account (Request $request){
+        DB::table('users')->where('id', '=', $request->id)->delete();
+        return redirect()->back();
+    }
+
+
 }
