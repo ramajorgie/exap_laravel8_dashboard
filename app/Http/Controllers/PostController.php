@@ -77,4 +77,11 @@ class PostController extends Controller
         return view('page_layout.form_postabout',['data'=>$data]);
     }
 
+
+    public function view_album(){
+        $data_album = DB::table('post_album')->get();
+        return view('page_layout.list_postalbum',['data'=>$data_album]);
+    }
+    
+
 }

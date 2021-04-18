@@ -18,5 +18,10 @@ class DeleteController extends Controller
         return redirect()->back();
     }
 
+    public function detele_album (Request $request){
+        DB::table('post_album')->where('id', '=', $request->id)->delete();
+        return redirect()->back();
+    }
+
 
 }

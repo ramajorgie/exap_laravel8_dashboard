@@ -7,6 +7,9 @@ use App\Http\Controllers\ListController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ProfileControler;
+
+
 
 
 
@@ -44,6 +47,8 @@ Route::get('/project', function () {
 
 
 
+
+
 Route::get('/login', function () {
     return view('home.login');
 });
@@ -61,6 +66,7 @@ Route::post('/update_tampilan_project',[ListController::class, 'update_view_proj
 Route::post('/lihat_project',[ListController::class, 'view_project']);
 Route::get('/hapus_project/{id}',[DeleteController::class, 'detele_project']);
 Route::get('/delete_account/{id}',[DeleteController::class, 'detele_account']);
+Route::get('/delete_album/{id}',[DeleteController::class, 'detele_album']);
 
 Route::get('/post_about',[PostController::class, 'view_about']);
 
@@ -70,6 +76,13 @@ Route::post('/user_add',[AccountController::class, 'add_account']);
 Route::get('/account',[AccountController::class, 'view_account']);
 
 Route::post('/update_status',[AccountController::class, 'update_user_status']);
+
+Route::get('/view_album',[PostController::class, 'view_album']);
+
+Route::get('/profile',[ProfileControler::class, 'view_profile']);
+Route::post('/profile_update',[ProfileControler::class, 'profile_update']);
+
+Route::post('/update_foto_profile',[ProfileControler::class, 'update_foto_profile']);
 
 
 // Route::group(['middleware' => 'CekLoginMiddleware'], function() {

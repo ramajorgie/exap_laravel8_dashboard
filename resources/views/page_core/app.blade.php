@@ -117,7 +117,7 @@
                                         <a href="/post_album">Post Album</a>
                                     </li>
                                     <li>
-                                        <a href="#">List Albums</a>
+                                        <a href="/view_album">List Albums</a>
                                     </li>
                                 </ul>
                             </div>
@@ -143,7 +143,7 @@
                         @endif
 
                         <li class="side-nav-item">
-                            <a href="#" class="side-nav-link">
+                            <a href="/profile" class="side-nav-link">
                                 <i class="mdi mdi-account-circle"></i>
                                 <span> My Account </span>
                             </a>
