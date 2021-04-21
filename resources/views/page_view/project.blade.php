@@ -3,32 +3,44 @@
 @section('title','Project')
 
 @section('container')
-    <section id="" class="team-section pt-150 pb-150">
+
+<section id="about" class="about-section pt-40">
+  <div class="container">
+    <div class="row">
+      <div class="section-title text-center mb-30">
+        <span class="wow ">Our Project</span>
+      </div>
+      @foreach ($data as $tampil)
+      <div class="col-sm-4">
+        <div class="about-content text-center mb-20">
+          <p class="mb-35  ">
+            <img src="{{ asset('/assets_foto_post/'.$tampil->foto) }}" class="img-responsive" alt="...">
+          </p>
+        </div>
+      </div>
+      @endforeach
+      <div class="col-sm-8">
+        <div style="text-align: justify;" class="about-content mb-20">
+          <p class="mb-35  ">
+            <?php
+            foreach ($data as $tampil){
+              echo $tampil->isi;
+            }?>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section id="" class="team-section pt-40">
       <div class="shape shape-5">
         <img src="assets/img/shapes/shape-2.svg" alt="" />
       </div>
       <div class="shape shape-6">
         <img src="assets/img/shapes/shape-5.svg" alt="" />
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-8 mx-auto">
-            <div class="section-title text-center mb-55">
-              
-              <span class="wow fadeInDown" data-wow-delay=".2s">Our Project</span>
-              <?php
-              foreach ($data as $item){
-              echo "'<h2 class="mb-15 wow fadeInUp" data-wow-delay=".4s">'.$item->judul_project.'</h2><p class="wow fadeInUp" data-wow-delay=".6s"></p>'";
-              echo "<img src="{{ asset('/assets_foto_post/'.$item->foto) }}" alt="" style="width: 65px; height: 65px;">";
-              
-              echo $item->isi;
-              
-              
-            }?>
-            </div>
-          </div>
-        </div>
-        
+      <div class="container">        
         <div class="team-slider-wrapper">
           <div class="row team-active">
             <div class="col-xl-3 col-lg-3">

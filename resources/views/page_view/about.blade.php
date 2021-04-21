@@ -11,7 +11,7 @@
             <span class="wow ">About Company</span>
           </div>
           @foreach ($data as $tampilkan)
-          <div class="col-sm-4">
+          <div class="col-sm-6">
             <div class="about-content text-center mb-20">
               <p class="mb-35  ">
                 <img src="{{ asset('/assets_foto_post/'.$tampilkan->gambar) }}" class="img-responsive" alt="...">
@@ -19,8 +19,8 @@
             </div>
           </div>
           @endforeach
-          <div class="col-sm-8">
-            <div class="about-content text-align mb-20">
+          <div class="col-sm-6">
+            <div style="text-align: justify;" class="about-content mb-20">
               <p class="mb-35  ">
                 <?php
                 foreach ($data as $item){
@@ -174,8 +174,7 @@
             <div class="faq-content-wrapper pt-90 pb-90">
 
               <div class="section-title text-center mb-25">
-                <span class="wow fadeInDown" data-wow-delay=".2s">Vision and Mission</span>
-                <h2 class="wow fadeInUp" data-wow-delay=".4s">What Our Patients Says</h2>
+                <h2 class="wow fadeInUp" data-wow-delay=".4s">Vision and Mision</h2>
               </div>
               
             </div>

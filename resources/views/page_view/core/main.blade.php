@@ -123,13 +123,13 @@
                         <p data-animation="fadeInLeft" data-duration="1.5s" data-delay=".7s">
                           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dinonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
                         </p>
-                        <a href="#about" class="btn theme-btn page-scroll" data-animation="fadeInUp" data-duration="1.5s" data-delay=".9s">Learn More</a>
+                        
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="single-slider img-bg" style="background-image: url('{{URL::asset('assets_view/img/slider/bg2.jpg')}}')">
+              <div class="single-slider img-bg" style="background-image: url('{{URL::asset('assets_view/img/slider/banner2.jpg')}}')">
                 <div class="container">
                   <div class="row">
                     <div class="col-xl-7 col-lg-8 col-md-10">
@@ -138,7 +138,7 @@
                         <p data-animation="fadeInLeft" data-duration="1.5s" data-delay=".7s">
                           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dinonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
                         </p>
-                        <a href="#contact" class="btn theme-btn page-scroll" data-animation="fadeInUp" data-duration="1.5s" data-delay=".9s">Make Appoinment</a>
+                        
                       </div>
                     </div>
                   </div>
@@ -153,7 +153,7 @@
                         <p data-animation="fadeInLeft" data-duration="1.5s" data-delay=".7s">
                           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dinonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
                         </p>
-                        <a href="#services" class="btn theme-btn page-scroll" data-animation="fadeInUp" data-duration="1.5s" data-delay=".9s">Our Services</a>
+                        
                       </div>
                     </div>
                   </div>
