@@ -100,6 +100,11 @@ class PostController extends Controller
         $data = DB::table('post_about')->get();
         return view('page_layout.post_experience_team',['data'=>$data]);
     }
+
+    public function view_project_front(){
+        $tampilkan_project = DB::table('post_project')->where('status','Tampilkan')->get();
+        return view('page_view.project',['data'=>$tampilkan_project]);
+    }
     
 
 }

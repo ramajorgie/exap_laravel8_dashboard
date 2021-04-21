@@ -23,6 +23,15 @@
             </div>
           </div>
         </div>
+
+        @foreach ($data as $tampilkan)
+
+         {{$tampilkan->judul_project}}
+         {{$tampilkan->isi}}
+
+         <img src="{{ asset('/assets_foto_post/'.$tampilkan->foto) }}" alt="" style="width: 65px; height: 65px;">
+
+        @endforeach
         <div class="team-slider-wrapper">
           <div class="row team-active">
             <div class="col-xl-3 col-lg-3">

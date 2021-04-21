@@ -40,9 +40,9 @@ Route::get('/contact', function () {
 Route::get('/service', function () {
     return view('page_view.service');
 });
-Route::get('/project', function () {
-    return view('page_view.project');
-});
+// Route::get('/project', function () {
+//     return view('page_view.project');
+// });
 
 
 
@@ -84,6 +84,9 @@ Route::post('/profile_update',[ProfileControler::class, 'profile_update']);
 
 Route::post('/update_foto_profile',[ProfileControler::class, 'update_foto_profile']);
 Route::post('/update_about_gambar',[PostController::class, 'update_about_gambar']);
+
+
+Route::get('/project',[PostController::class, 'view_project_front']);
 
 
 // Route::group(['middleware' => 'CekLoginMiddleware'], function() {
