@@ -38,19 +38,19 @@
                                         @foreach ($data as $tampilkan)
                                         
                                         <div class="mb-3">
-                                          <label for="projectname" class="form-label">Judul Bio </label>
+                                          <label for="projectname" class="form-label">Bio Title </label>
                                           <input type="text" id="projectname" name="judul_about" class="form-control" value="{{$tampilkan->judul_about}}">
                                         </div>
                                         <div class="mb-3">
                                           <img style="width: 200px; height: 130px;" src="{{ asset('/assets_foto_post/'.$tampilkan->gambar) }}" alt="">
                                           
                                           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                            Update Gambar
+                                            Update Image
                                             </button>
                                         </div>
                                         <div class="mb-3">
                                           
-                                        <label for="project-overview" class="form-label">Bahasa</label>
+                                        <label for="project-overview" class="form-label">Language</label>
                                                     
                                                     <select class="form-control select2" data-toggle="select2"  name="bahasa">
                                                         @if ( $tampilkan -> bahasa == 'Indonesia')
@@ -62,12 +62,12 @@
                                         </div>
 
                                         <div class="tab-content">
-                                              <textarea name="isi_about" >{{$tampilkan->isi}}</textarea>
+                                              <textarea cols="20" rows="50" name="isi_about" >{{$tampilkan->isi}}</textarea>
                                                 <script>
                                                         CKEDITOR.replace( 'isi_about' );
                                                 </script>
                                                 <div style="text-align: center; margin-top: 10px;">
-                                                <button class="btn btn-success" type="submit">Simpan</button>
+                                                <button class="btn btn-success" type="submit">Save</button>
                                                 </div>
                                         </form>
 
@@ -77,12 +77,12 @@
                                             <form action="update_about_gambar" method="post" enctype="multipart/form-data">
                                             @csrf
                                               <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Upload Gambar</h5>
+                                                <h5 class="modal-title" id="exampleModalLabel">Upload</h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                               </div>
                                               <div class="modal-body">
                                                 <input type="text" name="id" value="{{$tampilkan->id}}" hidden>
-                                                <input type="file" name="gambar">
+                                                <input type="file" name="gambar" required>
                                               </div>
                                               <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

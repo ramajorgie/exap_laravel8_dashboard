@@ -15,6 +15,7 @@ class ProfileControler extends Controller
         $view_profile = DB::table('users')->where('name',$user_cek)->get();
         return view('page_layout.edit_account',['data'=>$view_profile]);
     }
+    
 
     public function profile_update(Request $request){
         $cek_file_password = $request->password;

@@ -170,14 +170,28 @@
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-xl-6 offset-xl-6 col-lg-8 col-md-10">
-            <div class="faq-content-wrapper pt-90 pb-90">
-
-              <div class="section-title text-center mb-25">
-                <h2 class="wow fadeInUp" data-wow-delay=".4s">Vision and Mision</h2>
+          <div class="col-6">
+            
+              <div class="section-title text-center mb-20 m-md-4 ">
+                <h5 class="wow fadeInUp" data-wow-delay=".4s">Vision</h5>
+                <p style="color: white">Committed to provide good energy, solutions innovatively, cost effective, and  environmentally friendly.</p>
               </div>
-              
+            
+              <div class="section-title text-center mb-25">
+                <h5 class="wow fadeInUp" data-wow-delay=".4s">Mission</h5>
+                <p style="color: white" class="text-align">Fully contribute to bringing and developing renewable energy throughout the country with a sustainable power.</p>
+              </div>
+            
+          </div>
+          <div class="col-6">
+            <div class="faq-content-wrapper pt-90 pb-90">
+              <div class="section-title text-center mb-25">
+                <h2 class="wow fadeInUp" data-wow-delay=".4s">Vision and Mission</h2>
+              </div>
             </div>
+          </div>
+          <div class="col-xl-6 offset-xl-6 col-lg-8 col-md-10">
+            
           </div>
         </div>
       </div>
