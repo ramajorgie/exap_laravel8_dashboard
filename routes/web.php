@@ -83,6 +83,7 @@ Route::get('/profile',[ProfileControler::class, 'view_profile']);
 Route::post('/profile_update',[ProfileControler::class, 'profile_update']);
 
 Route::post('/update_foto_profile',[ProfileControler::class, 'update_foto_profile']);
+Route::post('/update_about_gambar',[PostController::class, 'update_about_gambar']);
 
 
 // Route::group(['middleware' => 'CekLoginMiddleware'], function() {

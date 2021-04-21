@@ -7,24 +7,29 @@
     <section id="about" class="about-section pt-40">
       <div class="container">
         <div class="row">
-          <div class="col-xl-10 col-lg-11 mx-auto">
-            <div class="about-content text-center mb-55">
-              <div class="section-title mb-30">
-                <span class="wow fadeInDown" data-wow-delay=".2s">About Company</span>
-              </div>
+          <div class="section-title text-center mb-30">
+            <span class="wow fadeInDown" data-wow-delay=".2s">About Company</span>
+          </div>
+          @foreach ($data as $tampilkan)
+          <div class="col-sm-4">
+            <div class="about-content text-center mb-20">
+              <p class="mb-35 wow fadeInUp" data-wow-delay=".6s">
+                <img src="{{ asset('/assets_foto_post/'.$tampilkan->gambar) }}" class="img-responsive" alt="...">
+              </p>
+            </div>
+          </div>
+          @endforeach
+          <div class="col-sm-8">
+            <div class="about-content text-align mb-20">
               <p class="mb-35 wow fadeInUp" data-wow-delay=".6s">
                 <?php
                 foreach ($data as $item){
                   echo $item->isi;
                 }?>
               </p>
-              <a href="#" class="btn theme-btn wow fadeInUp" data-wow-delay=".8s">Learn More</a>
             </div>
           </div>
         </div>
-      </div>
-      <div class="about-img text-center">
-        <img src="{{URL::asset('assets_view')}}/img/about/about-img.png" alt="" />
       </div>
     </section>
 

@@ -44,7 +44,7 @@
                   <div class="header-top-left text-center text-md-left">
                     <ul>
                       <li>
-                        <a href="#"><i class="lni lni-phone"></i> +463281626556</a>
+                        <a href="#"><i class="lni lni-phone"></i> +62199859911</a>
                       </li>
                       <li>
                         <a href="#"><i class="lni lni-envelope"></i> info@noorenergi.co.id</a>
@@ -170,10 +170,13 @@
         <div class="container">
           <div class="footer-widget-wrapper">
             <div class="row">
-              <div class="col-xl-4 col-lg-5 col-md-6">
-                <div class="footer-widget mb-30">
+              <div class="col-xl-4 col-lg-5 col-md-4">
+                <div class="footer-widget mb-20">
                   <a href="index-2.html" class="logo"><img src="{{URL::asset('assets_view')}}/img/noor.svg" alt="" /></a>
-                  <p>Lorem ipsum dolor serit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore dolore magna aliquyam erat diam voluptua.</p>
+                  <p style="color: lightslategray" >PT. NOOR ENERGI BAIK  known as NOORenergi was founded in 2021 is a global  Renewable Energy Service Company (RESCO) in  Indonesia.
+                    <br> <h5 style="color: lightslategray"><i class="lni lni-phone-set"></i> <span>+62199859911</span></h5>
+                  </p>
+                  
                   <div class="footer-social-links">
                     <ul>
                       <li>
@@ -194,7 +197,7 @@
               </div>
               <div class="col-xl-2 col-lg-3 col-md-6">
                 <div class="footer-widget mb-30">
-                  <h4>Quick Link</h4>
+                  <h4>Menu</h4>
                   <ul class="footer-links">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
@@ -206,7 +209,7 @@
               </div>
               <div class="col-xl-2 col-lg-3 col-md-5">
                 <div class="footer-widget mb-30">
-                  <h4>Quick Link</h4>
+                  {{--  <h4>Quick Link</h4>  --}}
                   {{--  <ul class="footer-links">
                     <li><a href="#">Cardiology</a></li>
                     <li><a href="#">Neurology</a></li>
@@ -219,7 +222,11 @@
               </div>
               <div class="col-xl-4 col-lg-12 col-md-7">
                 <div class="footer-widget mb-30">
-                  <h4>Medical Location</h4>
+                  <h4>Location</h4>
+                  <p style="color: lightslategray">Jl. Saronojiwo I No. 22 Kel. Panjang Jiwo <br>
+                    Kec. Tenggilis Mejoyo, <br>
+                    Surabaya 60299
+                    </p>
                   <div class="map-canvas">
                     <iframe class="map" id="gmap_canvas" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d989.3454987279367!2d112.75881102915858!3d-7.3109120694680945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb017ba883db%3A0x9325f97aacae461c!2sJl.%20Saronojiwo%20I%20No.39%2C%20Panjang%20Jiwo%2C%20Kec.%20Tenggilis%20Mejoyo%2C%20Kota%20SBY%2C%20Jawa%20Timur%2060299!5e0!3m2!1sen!2sid!4v1617466718611!5m2!1sen!2sid"></iframe>
                   </div>

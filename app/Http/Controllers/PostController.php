@@ -51,6 +51,18 @@ class PostController extends Controller
         return redirect()->back()->with('success', 'About Berhasil Diperbaruhi');
     }
 
+    public function update_about_gambar(Request $request){
+        $imageName = time().'.'.$request->gambar->extension();  
+        $request->gambar->move(public_path('assets_foto_post'), $imageName);
+
+        DB::table('post_about')->where('id',$request->id)
+         ->update([
+          'gambar' =>$imageName,
+         ]);
+         
+         return redirect()->back()->with('success', 'Gambar Berhasil Diupdate!');
+    }
+
     public function about()
     {   
         $data = DB::table('post_about')->get();

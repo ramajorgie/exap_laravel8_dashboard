@@ -18,9 +18,6 @@ class ProfileControler extends Controller
 
     public function profile_update(Request $request){
         $cek_file_password = $request->password;
-        
-
-        
 
         if($cek_file_password == null){
         DB::table('users')->where('id',$request->id)
