@@ -49,12 +49,14 @@
                                                             <form action="/update_tampilan_project" method="post">
                                                             @csrf
                                                             <input type="text" value="{{$list->id}}" name="id" hidden>
+                                                            <input type="text" value="{{$list->status}}" name="status" hidden>
                                                             <button class="btn btn-danger" type="submit">Close</button>
                                                             </form>
                                                             @elseif ( $list->status == "Sembunyikan")
                                                             <form action="/update_tampilan_project" method="post">
                                                             @csrf
                                                             <input type="text" value="{{$list->id}}" name="id" hidden>
+                                                            <input type="text" value="{{$list->status}}" name="status" hidden>
                                                             <button class="btn btn-success" type="submit">Open</button>
                                                             </form>
                                                             @endif

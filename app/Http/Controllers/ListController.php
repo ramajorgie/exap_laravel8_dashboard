@@ -18,16 +18,23 @@ class ListController extends Controller
 
     public function update_view_project (Request $request){
 
-
-        DB::table('post_project')->where('status','Tampilkan')
+        if( $request->status == 'Tampilkan'){
+        
+        DB::table('post_project')->where('id',$request->id)
             ->update([
              'status' => 'Sembunyikan',
         ]);
-
+        }
+        elseif($request->status == 'Sembunyikan') {
         DB::table('post_project')->where('id',$request->id)
             ->update([
              'status' => 'Tampilkan',
         ]);
+        }
+
+        else{
+            return redirect()->back();
+        }
         return redirect()->back();
     }
 
