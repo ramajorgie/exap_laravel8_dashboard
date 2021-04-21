@@ -21,6 +21,8 @@
                 </div>
                 <form action="/profile_update" method="post">
                  @csrf
+
+                 
                 
                 <div class="row mt-2">
                 <input type="text" class="form-control" name="id"  value=" {{$tampilkan->id}}" hidden>
@@ -43,7 +45,11 @@
 
         <div class="col-md-4">
             <div class="p-3 py-5">
+                @if ( session()->get('login_status') =='Super Admin')
                 <div class="d-flex justify-content-between align-items-center experience"><span>User Level</span><span class="border px-3 p-1 add-experience"><i class="fa fa-plus"></i>&nbsp;1</span></div><br>
+                @elseif ( session()->get('login_status') =='Admin')
+                <div class="d-flex justify-content-between align-items-center experience"><span>User Level</span><span class="border px-3 p-1 add-experience"><i class="fa fa-plus"></i>&nbsp;2</span></div><br>
+                @endif
                 <div class="col-md-12"><label class="labels">Posisi</label><input type="text" class="form-control" placeholder="Job Position" value=""></div> <br>
                 <div class="col-md-12"><label class="labels">Bio</label><input type="text" class="form-control" placeholder="About Me" value=""></div>
             </div>
