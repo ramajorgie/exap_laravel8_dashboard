@@ -119,10 +119,8 @@
                   <div class="row">
                     <div class="col-xl-7 col-lg-8 col-md-10">
                       <div class="slider-content">
-                        <h1 data-animation="fadeInDown" data-duration="1.5s" data-delay=".5s">Complete Healthcare Solution</h1>
-                        <p data-animation="fadeInLeft" data-duration="1.5s" data-delay=".7s">
-                          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dinonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
-                        </p>
+                        <h1 data-animation="fadeInDown" data-duration="1.5s" data-delay=".5s">Solar Power <br> Plant</h1>
+                        <p data-animation="fadeInLeft" data-duration="1.5s" data-delay=".7s">Solar Power Plants are an energy source that produces electricity that is environmentally friendly and does not us e materials fuel oil, so it is very cheap, because solar energy is an unlimited source of energy.</p>
                         
                       </div>
                     </div>
@@ -134,7 +132,7 @@
                   <div class="row">
                     <div class="col-xl-7 col-lg-8 col-md-10">
                       <div class="slider-content">
-                        <h1 data-animation="fadeInDown" data-duration="1.5s" data-delay=".5s">Best Doctors and Equipments in Town</h1>
+                        <h1 data-animation="fadeInDown" data-duration="1.5s" data-delay=".5s">Best Engineer and Equipments in Town</h1>
                         <p data-animation="fadeInLeft" data-duration="1.5s" data-delay=".7s">
                           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dinonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
                         </p>
