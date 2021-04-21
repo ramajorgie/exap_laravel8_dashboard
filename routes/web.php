@@ -40,13 +40,16 @@ Route::get('/contact', function () {
 Route::get('/service', function () {
     return view('page_view.service');
 });
-// Route::get('/project', function () {
-//     return view('page_view.project');
+// Route::get('/visi_misi', function () {
+//     return view('page_layout.visi_misi');
 // });
 
+Route::get('/visi_misi',[ListController::class, 'view_visi_misi']);
 
+Route::get('/exp_team',[ListController::class, 'view_team']);
 
-
+Route::post('/update_visi_misi',[PostController::class, 'visi_misi']);
+Route::post('/update_project',[PostController::class,'update_project']);
 
 
 Route::get('/login', function () {
@@ -59,6 +62,8 @@ Route::post('/insert_postproject',[PostController::class, 'post_project']);
 Route::post('/insert_postabout',[PostController::class, 'post_about']);
 Route::post('/insert_postalbum',[PostController::class, 'post_album']);
 Route::post('/insert_postproject',[PostController::class, 'post_project']);
+
+Route::post('/add_exp_team',[PostController::class, 'exp_team']);
 
 
 Route::get('/view_post',[ListController::class, 'list_project']);

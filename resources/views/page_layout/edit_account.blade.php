@@ -72,7 +72,7 @@
       </div>
       <div class="modal-body">
         <input type="text" name="email" value="{{$tampilkan->email}}" hidden>
-        <input type="file" name="foto_update">
+        <input type="file" name="foto_update" required>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

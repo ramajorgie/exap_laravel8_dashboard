@@ -76,10 +76,10 @@
                                         <a href="/post_about">About Company</a>
                                     </li>
                                     <li>
-                                        <a href="#">Our Experience Team</a>
+                                        <a href="/exp_team">Our Experience Team</a>
                                     </li>
                                     <li>
-                                        <a href="#">Vision and Mission</a>
+                                        <a href="/visi_misi">Vision and Mission</a>
                                     </li>
                                 </ul>
                             </div>

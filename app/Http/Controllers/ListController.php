@@ -48,4 +48,14 @@ class ListController extends Controller
         $view_isi_about = DB::table('post_about')->where('id',$request->id)->get();
         return view('page_views.view_about',['view_about' => $view_isi_about]);
     }
+
+    public function view_team(){
+        $view_team = DB::table('exp_team')->get();
+        return view('page_layout.form_exp_team',['data' => $view_team]);
+    }
+
+    public function view_visi_misi(){
+        $view_team = DB::table('data_visi_misi')->get();
+        return view('page_layout.visi_misi',['data' => $view_team]);
+    }
 }

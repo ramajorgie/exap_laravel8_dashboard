@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Exp_Model;
 use Illuminate\Http\Request;
 use App\Models\PostProject_Model;
 use Illuminate\Support\Facades\DB;
 use App\Models\PostAbout_Model;
 use App\Models\PostAlbum_Model;
+use App\Models\Visi_Misi_Model;
+
+
 
 
 
@@ -104,6 +108,57 @@ class PostController extends Controller
     public function view_project_front(){
         $tampilkan_project = DB::table('post_project')->where('status','Tampilkan')->get();
         return view('page_view.project',['data'=>$tampilkan_project]);
+    }
+
+    public function exp_team(Request $request){
+
+        $imageName = time().'.'.$request->foto->extension();  
+        $request->foto->move(public_path('assets_foto_exp_team'), $imageName);
+
+        $exp_post                       = new Exp_Model();
+        $exp_post->nama                 = $request->input('nama');
+        $exp_post->posisi               = $request->input('posisi');
+        $exp_post->biografi             = $request->input('biografi');
+        $exp_post->foto                 = $imageName;
+        $exp_post->waktu                = $request->input('tanggal');
+        $exp_post->save();
+        
+        return redirect()->back()->with('success', 'Berhasil Ditambah!');
+    }
+
+    public function visi_misi (Request $request){
+
+        DB::table('data_visi_misi')
+         ->update([
+          'judul'     =>$request->judul,
+          'visi_misi' =>$request->visi_misi,
+         ]);
+        
+        return redirect()->back()->with('success', 'Berhasil Diupdate!');
+    }
+
+
+    public function update_project (Request $request){
+            if($request->foto == null){
+                DB::table('post_project')->where('id',$request->id)
+                ->update([
+                 'judul_project'     =>$request->judul_project,
+                 'isi'               =>$request->isi,
+                
+                ]);
+            }
+            else{
+                $imageName = time().'.'.$request->foto->extension();  
+                $request->foto->move(public_path('assets_foto_post'), $imageName);
+                DB::table('post_project')->where('id',$request->id)
+                ->update([
+                 'judul_project'     =>$request->judul_project,
+                 'isi'               =>$request->isi,
+                 'foto'              =>$imageName,
+                ]);
+            }
+        
+        return redirect('/view_post');
     }
     
 
