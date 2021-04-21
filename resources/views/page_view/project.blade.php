@@ -14,24 +14,21 @@
         <div class="row">
           <div class="col-xl-8 mx-auto">
             <div class="section-title text-center mb-55">
-              <span class="wow fadeInDown" data-wow-delay=".2s">Project</span>
-              <h2 class="mb-15 wow fadeInUp" data-wow-delay=".4s">Meet Our Doctors</h2>
-              <p class="wow fadeInUp" data-wow-delay=".6s">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dinonumy <br class="d-none d-lg-block" />
-                eirmod tempor invidunt ut labore et dolore magn.
-              </p>
+              
+              <span class="wow fadeInDown" data-wow-delay=".2s">Our Project</span>
+              <?php
+              foreach ($data as $item){
+              echo "'<h2 class="mb-15 wow fadeInUp" data-wow-delay=".4s">'.$item->judul_project.'</h2><p class="wow fadeInUp" data-wow-delay=".6s"></p>'";
+              echo "<img src="{{ asset('/assets_foto_post/'.$item->foto) }}" alt="" style="width: 65px; height: 65px;">";
+              
+              echo $item->isi;
+              
+              
+            }?>
             </div>
           </div>
         </div>
-
-        @foreach ($data as $tampilkan)
-
-         {{$tampilkan->judul_project}}
-         {{$tampilkan->isi}}
-
-         <img src="{{ asset('/assets_foto_post/'.$tampilkan->foto) }}" alt="" style="width: 65px; height: 65px;">
-
-        @endforeach
+        
         <div class="team-slider-wrapper">
           <div class="row team-active">
             <div class="col-xl-3 col-lg-3">
