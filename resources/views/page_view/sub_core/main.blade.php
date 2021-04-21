@@ -18,22 +18,6 @@
     <link rel="stylesheet" href="{{URL::asset('assets_view')}}/css/main.css" />
   </head>
   <body>
-      {{--  <div class="preloader">
-        <div class="loader">
-          <div class="ytp-spinner">
-            <div class="ytp-spinner-container">
-              <div class="ytp-spinner-rotator">
-                <div class="ytp-spinner-left">
-                  <div class="ytp-spinner-circle"></div>
-                </div>
-                <div class="ytp-spinner-right">
-                  <div class="ytp-spinner-circle"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>  --}}
 
       <header id="home" class="header">
         <div class="header-wrapper">
@@ -44,7 +28,7 @@
                   <div class="header-top-left text-center text-md-left">
                     <ul>
                       <li>
-                        <a href="#"><i class="lni lni-phone"></i> +463281626556</a>
+                        <a href="#"><i class="lni lni-phone"></i> +62199859911</a>
                       </li>
                       <li>
                         <a href="#"><i class="lni lni-envelope"></i> info@noorenergi.co.id</a>
@@ -111,57 +95,12 @@
             </div>
           </div>
         </div>
-        {{--  <div class="slider-wrapper">
+        <div class="slider-wrapper">
           <section class="slider-section">
             <div class="slider-active slick-style">
-              <div class="single-slider img-bg" style="background-image: url('{{URL::asset('assets_view/img/slider/1.jpeg')}}')">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-xl-7 col-lg-8 col-md-10">
-                      <div class="slider-content">
-                        <h1 data-animation="fadeInDown" data-duration="1.5s" data-delay=".5s">Complete Healthcare Solution</h1>
-                        <p data-animation="fadeInLeft" data-duration="1.5s" data-delay=".7s">
-                          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dinonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
-                        </p>
-                        <a href="#about" class="btn theme-btn page-scroll" data-animation="fadeInUp" data-duration="1.5s" data-delay=".9s">Learn More</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="single-slider img-bg" style="background-image: url('{{URL::asset('assets_view/img/slider/bg2.jpg')}}')">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-xl-7 col-lg-8 col-md-10">
-                      <div class="slider-content">
-                        <h1 data-animation="fadeInDown" data-duration="1.5s" data-delay=".5s">Best Doctors and Equipments in Town</h1>
-                        <p data-animation="fadeInLeft" data-duration="1.5s" data-delay=".7s">
-                          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dinonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
-                        </p>
-                        <a href="#contact" class="btn theme-btn page-scroll" data-animation="fadeInUp" data-duration="1.5s" data-delay=".9s">Make Appoinment</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="single-slider img-bg" style="background-image: url('{{URL::asset('assets_view/img/slider/3bg.jpeg')}}')">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-xl-7 col-lg-8 col-md-10">
-                      <div class="slider-content">
-                        <h1 data-animation="fadeInDown" data-duration="1.5s" data-delay=".5s">Your Health is Our Top Priority</h1>
-                        <p data-animation="fadeInLeft" data-duration="1.5s" data-delay=".7s">
-                          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dinonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
-                        </p>
-                        <a href="#services" class="btn theme-btn page-scroll" data-animation="fadeInUp" data-duration="1.5s" data-delay=".9s">Our Services</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </section>
-        </div>  --}}
+        </div>
         <section class="page-banner-section pt-25 pb-25 img-bg faq-section theme-bg" style="background-image: url('{{URL::asset('assets_view/img/shapes/shape-8.svg')}}')">
           <div class="container">
               <div class="row">
@@ -180,7 +119,7 @@
                   </div>
               </div>
           </div>
-      </section>
+        </section>
       </header>
 
       @yield('container')
@@ -247,7 +186,7 @@
                     Surabaya 60299
                     </p>
                   <div class="map-canvas">
-                    <iframe class="map" id="gmap_canvas" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d989.3454987279367!2d112.75881102915858!3d-7.3109120694680945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb017ba883db%3A0x9325f97aacae461c!2sJl.%20Saronojiwo%20I%20No.39%2C%20Panjang%20Jiwo%2C%20Kec.%20Tenggilis%20Mejoyo%2C%20Kota%20SBY%2C%20Jawa%20Timur%2060299!5e0!3m2!1sen!2sid!4v1617466718611!5m2!1sen!2sid"></iframe>
+                    <iframe class="map" id="gmap_canvas" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.380886307088!2d112.75724151420476!3d-7.311037173910575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb017c74ec55%3A0x86391d5057ad2937!2sJl.%20Saronojiwo%20I%20No.22%2C%20Panjang%20Jiwo%2C%20Kec.%20Tenggilis%20Mejoyo%2C%20Kota%20SBY%2C%20Jawa%20Timur%2060299!5e0!3m2!1sen!2sid!4v1618994307590!5m2!1sen!2sid"></iframe>
                   </div>
                 </div>
               </div>

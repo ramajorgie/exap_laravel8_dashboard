@@ -209,15 +209,6 @@
               </div>
               <div class="col-xl-2 col-lg-3 col-md-5">
                 <div class="footer-widget mb-30">
-                  {{--  <h4>Quick Link</h4>  --}}
-                  {{--  <ul class="footer-links">
-                    <li><a href="#">Cardiology</a></li>
-                    <li><a href="#">Neurology</a></li>
-                    <li><a href="#">Gastroenterology</a></li>
-                    <li><a href="#">Routine Checkup</a></li>
-                    <li><a href="#">Orthopedics</a></li>
-                    <li><a href="#">Dental Surgery</a></li>
-                  </ul>  --}}
                 </div>
               </div>
               <div class="col-xl-4 col-lg-12 col-md-7">
@@ -228,7 +219,7 @@
                     Surabaya 60299
                     </p>
                   <div class="map-canvas">
-                    <iframe class="map" id="gmap_canvas" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d989.3454987279367!2d112.75881102915858!3d-7.3109120694680945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb017ba883db%3A0x9325f97aacae461c!2sJl.%20Saronojiwo%20I%20No.39%2C%20Panjang%20Jiwo%2C%20Kec.%20Tenggilis%20Mejoyo%2C%20Kota%20SBY%2C%20Jawa%20Timur%2060299!5e0!3m2!1sen!2sid!4v1617466718611!5m2!1sen!2sid"></iframe>
+                    <iframe class="map" id="gmap_canvas" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.380886307088!2d112.75724151420476!3d-7.311037173910575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb017c74ec55%3A0x86391d5057ad2937!2sJl.%20Saronojiwo%20I%20No.22%2C%20Panjang%20Jiwo%2C%20Kec.%20Tenggilis%20Mejoyo%2C%20Kota%20SBY%2C%20Jawa%20Timur%2060299!5e0!3m2!1sen!2sid!4v1618994307590!5m2!1sen!2sid"></iframe>
                   </div>
                 </div>
               </div>

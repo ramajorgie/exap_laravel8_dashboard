@@ -94,6 +94,12 @@ class PostController extends Controller
         $data_album = DB::table('post_album')->get();
         return view('page_layout.list_postalbum',['data'=>$data_album]);
     }
+
+    public function view_experience_team()
+    {      
+        $data = DB::table('post_about')->get();
+        return view('page_layout.post_experience_team',['data'=>$data]);
+    }
     
 
 }
