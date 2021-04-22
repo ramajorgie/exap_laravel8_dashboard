@@ -41,12 +41,17 @@ class LoginController extends Controller
         //     }
         // }
          $view_username = DB::table('users')->where('email',$request->email)->get();
+         $cek_msg = DB::table('contact')->where('status','Belum Terbaca')->count();
+        
         if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
             foreach($view_username as $username)
                         {
                             $data= array(
                         );
                         session(['login_status'=>$username->status]);
+                        session(['login_foto'=>$username->foto]);
+                        session(['login_msg'=>$cek_msg]);
+
                     }
             return redirect('/dashboard');
         }

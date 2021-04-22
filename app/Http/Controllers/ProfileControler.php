@@ -51,6 +51,8 @@ class ProfileControler extends Controller
          ->update([
           'foto' =>$imageName,
          ]);
+
+         session(['login_foto'=>$imageName]);
          return redirect()->back();
     }
 }

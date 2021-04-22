@@ -71,9 +71,8 @@
                                             <div class="mb-3">
                                                 <label for="recipient-name" class="col-form-label">Status:</label>
                                                 <select class="form-select" aria-label="Default select example" name="status">
-                                                <option selected>Open this select Stasus</option>
-                                                <option value="Super Admin">Super Admin</option>
-                                                <option value="Admin">Admin</option>
+                                                
+                                                <option selected value="Admin">Admin</option>
                                                 </select>
                                             </div>
                                             <div class="mb-3">
@@ -105,16 +104,20 @@
                                                 @csrf
                                                 <div class="mb-3">
                                                     <label for="recipient-name" class="col-form-label">Email:</label>
-                                                    <input type="text" class="form-control" name="email" id="recipient-name" value="{{$tampilkan->email}}">
+                                                    <input type="text" class="form-control" name="email" id="recipient-name" value="{{$tampilkan->email}}" readonly>
                                                 </div>
                                                 <div class="mb-3">
                                                 <label for="recipient-name" class="col-form-label">Status:</label>
-                                                <select class="form-select" aria-label="Default select example" name="status">
-                                                    <option selected>Open this select Stasus</option>
-                                                    <option value="Super Admin">Super Admin</option>
-                                                    <option value="Admin">Admin</option>
+                                                <select class="form-select" aria-label="Default select example" name="status" >
+                                                    <option selected value="Admin">Admin</option>
+                                                    <!-- <option value="Super Admin">Super Admin</option> -->
+                                                    
                                                 </select>
                                             </div>
+                                            <div class="mb-3">
+                                                    <label for="recipient-name" class="col-form-label">New Password:</label>
+                                                    <input type="text" class="form-control" name="password" id="recipient-name"  required>
+                                                </div>
                                                 
                                             </div>
                                             <div class="modal-footer">

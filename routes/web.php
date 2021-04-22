@@ -6,8 +6,10 @@ use App\Http\Controllers\DeleteController;
 use App\Http\Controllers\ListController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\Msg_Controller;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileControler;
+
 
 
 
@@ -50,6 +52,10 @@ Route::get('/exp_team',[ListController::class, 'view_team']);
 
 Route::post('/update_visi_misi',[PostController::class, 'visi_misi']);
 Route::post('/update_project',[PostController::class,'update_project']);
+
+Route::post('/add_msg',[Msg_Controller::class, 'add_msg']);
+Route::get('/view_msg',[Msg_Controller::class, 'view_msg']);
+Route::post('/read_msg',[Msg_Controller::class, 'read_msg']);
 
 
 Route::get('/login', function () {

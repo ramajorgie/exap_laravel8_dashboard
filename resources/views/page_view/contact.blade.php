@@ -23,10 +23,11 @@
         <div class="row">
           <div class="col-xl-12">
             <div class="contact-form">
-              <form action="#" method="POST" id="contact-form" class="contact-form">
+              <form action="/add_msg" method="POST" id="contact-form" class="contact-form">
+              @csrf
                 <div class="row">
                   <div class="col-md-6">
-                    <input type="text" id="name" name="name" placeholder="Name" required />
+                    <input type="text" id="name" name="nama" placeholder="Name" required />
                   </div>
                   <div class="col-md-6">
                     <input type="email" id="email" name="email" placeholder="Email" required />
@@ -39,7 +40,7 @@
                 </div>
                 <div class="row">
                   <div class="col-md-12">
-                    <textarea name="message" id="message" rows="5" placeholder="Message" required></textarea>
+                    <textarea name="msg" id="message"  placeholder="Message" required></textarea>
                   </div>
                 </div>
                 <div class="row">

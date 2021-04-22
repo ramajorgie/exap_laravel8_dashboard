@@ -143,6 +143,13 @@
                         @endif
 
                         <li class="side-nav-item">
+                            <a href="/view_msg" class="side-nav-link">
+                                <i class="uil-comments-alt"></i>
+                                <span> Massage <span class="badge bg-danger float-end">{{session()->get('login_msg')}}</span> </span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav-item">
                             <a href="/profile" class="side-nav-link">
                                 <i class="mdi mdi-account-circle"></i>
                                 <span> My Account </span>
@@ -215,7 +222,9 @@
                                 <a class="nav-link dropdown-toggle nav-user arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false"
                                     aria-expanded="false">
                                     <span class="account-user-avatar"> 
-                                        <img src="assets_dashboard/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
+
+                                     <img src="{{ asset('/assets_foto_profile/'.session()->get('login_foto')) }}" alt="" style="width: 35px; height: 35px;"  class="rounded-circle">
+                                        <!-- <img src="assets_dashboard/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle"> -->
                                     </span>
                                     <span>
                                         <span style="color: black" class="account-user-name">{{ Auth::user()->name }}</span>
