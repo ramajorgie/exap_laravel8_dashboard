@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 22, 2021 at 01:05 PM
+-- Generation Time: Apr 26, 2021 at 05:27 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -64,7 +64,7 @@ CREATE TABLE `contact` (
 --
 
 INSERT INTO `contact` (`id`, `nama`, `email`, `subject`, `msg`, `status`, `waktu`) VALUES
-(3, 'rama andika jorgie', 'ramaandikajorgie@gmail.com', 'kunam 123', 'Menurut Kamus Besar Bahasa Indonesia (KBBI), artikel merupakan suatu karya tulis yang ditulis secara lengkap.\r\n\r\nAdapun tujuan secara umum dari pembuatan artikel ialah untuk memengaruhi, mendidik, memberitahu, meyakinkan, serta menghibur pembacanya.\r\n\r\nArtikel tersebut biasanya dipublikasikan di suatu media, mulai buletin, majalah, koran hingga website.\r\n\r\nNah, untuk memahami lebih jelas tentang artikel, bisa membaca pengertian dari para ahli, ciri-ciri, kaidah kebahasaan hingga strukturnya.\r\n\r\nBerikut ini rangkuman tentang pengertian artikel menurut ahli, ciri-ciri, tujuan, manfaat, kaidah kebahasaan hingga strukturnya, seperti dilansir dari laman Gurupendidikan dan Serupa, Rabu (10/3/2021).', 'Belum Terbaca', '2021-04-22'),
+(3, 'rama andika jorgie', 'ramaandikajorgie@gmail.com', 'kunam 123', 'Menurut Kamus Besar Bahasa Indonesia (KBBI), artikel merupakan suatu karya tulis yang ditulis secara lengkap.\r\n\r\nAdapun tujuan secara umum dari pembuatan artikel ialah untuk memengaruhi, mendidik, memberitahu, meyakinkan, serta menghibur pembacanya.\r\n\r\nArtikel tersebut biasanya dipublikasikan di suatu media, mulai buletin, majalah, koran hingga website.\r\n\r\nNah, untuk memahami lebih jelas tentang artikel, bisa membaca pengertian dari para ahli, ciri-ciri, kaidah kebahasaan hingga strukturnya.\r\n\r\nBerikut ini rangkuman tentang pengertian artikel menurut ahli, ciri-ciri, tujuan, manfaat, kaidah kebahasaan hingga strukturnya, seperti dilansir dari laman Gurupendidikan dan Serupa, Rabu (10/3/2021).', 'Terbaca', '2021-04-22'),
 (4, 'ram', 'ramaandikajorgie@gmail.com', 'kunam 123', 'ra', 'Terbaca', '2021-04-22'),
 (5, 'kiki', 'kiki@gmail.com', 'tees kiki', 'tes kiki @123', 'Terbaca', '2021-04-22');
 
@@ -76,7 +76,6 @@ INSERT INTO `contact` (`id`, `nama`, `email`, `subject`, `msg`, `status`, `waktu
 
 CREATE TABLE `data_visi_misi` (
   `id` int(11) NOT NULL,
-  `judul` varchar(100) NOT NULL,
   `visi_misi` varchar(1000) NOT NULL,
   `status` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -85,8 +84,10 @@ CREATE TABLE `data_visi_misi` (
 -- Dumping data for table `data_visi_misi`
 --
 
-INSERT INTO `data_visi_misi` (`id`, `judul`, `visi_misi`, `status`) VALUES
-(1, 'Visi dan Misi PT.NOOR SUMBER ENERGY', '<p><strong>VISI</strong></p>\r\n\r\n<p><strong>MISI</strong></p>', 'tes');
+INSERT INTO `data_visi_misi` (`id`, `visi_misi`, `status`) VALUES
+(2, '1.visi pertama', 'Visi'),
+(3, '1.misi pertama', 'Misi'),
+(4, '3.persekutuan', 'Visi');
 
 -- --------------------------------------------------------
 
@@ -354,7 +355,7 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT for table `data_visi_misi`
 --
 ALTER TABLE `data_visi_misi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `exp_team`

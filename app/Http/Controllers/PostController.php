@@ -129,12 +129,12 @@ class PostController extends Controller
     public function visi_misi (Request $request){
 
         DB::table('data_visi_misi')
-         ->update([
-          'judul'     =>$request->judul,
-          'visi_misi' =>$request->visi_misi,
+         ->insert([
+          'visi_misi'     =>$request->isi,
+          'status'        =>$request->status,
          ]);
         
-        return redirect()->back()->with('success', 'Berhasil Diupdate!');
+        return redirect()->back()->with('success', 'Berhasil Ditambah');
     }
 
 

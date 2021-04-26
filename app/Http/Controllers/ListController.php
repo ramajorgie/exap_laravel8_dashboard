@@ -55,7 +55,8 @@ class ListController extends Controller
     }
 
     public function view_visi_misi(){
-        $view_team = DB::table('data_visi_misi')->get();
-        return view('page_layout.visi_misi',['data' => $view_team]);
+        $view_visi = DB::table('data_visi_misi')->where('status','visi')->get();
+        $view_misi = DB::table('data_visi_misi')->where('status','Misi')->get();
+        return view('page_layout.visi_misi',['visi' => $view_visi,'misi' => $view_misi]);
     }
 }
