@@ -50,7 +50,8 @@ Route::get('/visi_misi',[ListController::class, 'view_visi_misi']);
 
 Route::get('/exp_team',[ListController::class, 'view_team']);
 
-Route::post('/update_visi_misi',[PostController::class, 'visi_misi']);
+Route::post('/update_visi',[PostController::class, 'update_visi']);
+Route::post('/update_misi',[PostController::class, 'update_misi']);
 Route::post('/update_project',[PostController::class,'update_project']);
 
 Route::post('/add_msg',[Msg_Controller::class, 'add_msg']);

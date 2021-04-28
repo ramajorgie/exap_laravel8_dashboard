@@ -44,13 +44,6 @@ class PostController extends Controller
          'waktu'       => date('Y-m-d'),
          'bahasa'      => $request->input('bahasa'),
          ]);
-
-        // $post_about                       = new PostAbout_Model;
-        // $post_about->judul_about          = $request->input('judul_about');
-        // $post_about->isi                  = $request->input('isi_about');
-        // $post_about->waktu                = date('Y-m-d'); ;
-        // $post_about->bahasa               = $request->input('bahasa');
-        // $post_about->save();
         
         return redirect()->back()->with('success', 'About Berhasil Diperbaruhi');
     }
@@ -70,7 +63,13 @@ class PostController extends Controller
     public function about()
     {   
         $data = DB::table('post_about')->get();
-        return view('page_view.about',['data'=>$data]);
+        $view_visi = DB::table('data_visi_misi')->where('status','visi')->get();
+        $view_misi = DB::table('data_visi_misi')->where('status','Misi')->get();
+        return view('page_view.about',[
+            'data'=>$data,
+            'visi'=>$view_visi,
+            'misi'=>$view_misi
+            ]);
     }
 
     public function post_album(Request $request){
@@ -90,6 +89,7 @@ class PostController extends Controller
     public function view_about()
     {      
         $data = DB::table('post_about')->get();
+        
         return view('page_layout.form_postabout',['data'=>$data]);
     }
 
@@ -126,16 +126,38 @@ class PostController extends Controller
         return redirect()->back()->with('success', 'Berhasil Ditambah!');
     }
 
-    public function visi_misi (Request $request){
+    public function update_visi (Request $request){
 
-        DB::table('data_visi_misi')
-         ->insert([
-          'visi_misi'     =>$request->isi,
-          'status'        =>$request->status,
+        DB::table('data_visi_misi')->where('status','visi') 
+         ->update([
+          'visi_misi' => $request->isi
          ]);
         
-        return redirect()->back()->with('success', 'Berhasil Ditambah');
+        return redirect()->back()->with('success', 'Berhasil Diupdate');
     }
+    public function update_misi (Request $request){
+
+        DB::table('data_visi_misi')->where('status','misi') 
+         ->update([
+          'visi_misi' => $request->isi
+         ]);
+        
+        return redirect()->back()->with('success', 'Berhasil Diupdate');
+    }
+
+    // public function post_about(Request $request){
+
+
+    //     DB::table('post_about')->where('bahasa',$request->bahasa)
+    //     ->update([
+    //      'judul_about' => $request->input('judul_about'),
+    //      'isi'         => $request->input('isi_about'),
+    //      'waktu'       => date('Y-m-d'),
+    //      'bahasa'      => $request->input('bahasa'),
+    //      ]);
+        
+    //     return redirect()->back()->with('success', 'About Berhasil Diperbaruhi');
+    // }
 
 
     public function update_project (Request $request){

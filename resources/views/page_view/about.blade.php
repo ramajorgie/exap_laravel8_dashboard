@@ -174,12 +174,19 @@
             
               <div class="section-title text-center mb-20 m-md-4 ">
                 <h5 class="wow fadeInUp" data-wow-delay=".4s">Vision</h5>
-                <p style="color: white">Committed to provide good energy, solutions innovatively, cost effective, and  environmentally friendly.</p>
+                <?php
+                foreach ($visi as $item){
+                  echo '<p style="color:white;">'. $item->visi_misi .'</p>';
+                }?>
+                
               </div>
             
               <div class="section-title text-center mb-25">
                 <h5 class="wow fadeInUp" data-wow-delay=".4s">Mission</h5>
-                <p style="color: white" class="text-align">Fully contribute to bringing and developing renewable energy throughout the country with a sustainable power.</p>
+                <?php
+                foreach ($misi as $item){
+                  echo '<p style="color:white;">'. $item->visi_misi .'</p>';
+                }?>
               </div>
             
           </div>
