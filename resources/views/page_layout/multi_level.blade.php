@@ -10,7 +10,7 @@
                                         Berikut Ini list Member Yang terdaftar :
                                         </p>
                                         <div style="text-align: right;">
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Add New Mambers</button>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Add New Members</button>
                                         </div>
                                         <div class="tab-content">
                                             <div class="tab-pane show active" id="basic-datatable-preview">

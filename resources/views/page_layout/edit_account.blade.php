@@ -20,9 +20,7 @@
                     <h4 class="text-right">Profile Settings</h4>
                 </div>
                 <form action="/profile_update" method="post">
-                 @csrf
-
-                 
+                @csrf
                 
                 <div class="row mt-2">
                 <input type="text" class="form-control" name="id"  value=" {{$tampilkan->id}}" hidden>

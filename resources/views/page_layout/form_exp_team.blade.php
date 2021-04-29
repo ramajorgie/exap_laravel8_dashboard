@@ -14,40 +14,37 @@
                                           </div>
                                         @endif
 
-                                        <div class="row">
-                                            <div class="col-xl-6">
-                                                <div class="mb-3">
-                                                    <label for="projectname" class="form-label">Nama</label>
-                                                    <input type="text" id="projectname" name="nama" class="form-control" placeholder="Masukan Nama">
-                                                </div>
+                                            <div class="row">
+                                                <div class="col-xl-6">
+                                                    <div class="mb-3">
+                                                        <label for="projectname" class="form-label">Nama</label>
+                                                        <input type="text" id="projectname" name="nama" class="form-control" placeholder="Masukan Nama">
+                                                    </div>
 
-                                               
-                                                <div class="mb-3">
-                                                    <label for="example-date" class="form-label">Posisi</label>
-                                                    <input type="text" id="projectname" name="posisi" class="form-control" placeholder="Posisi Saat ini">
-                                                </div>
+                                                    <div class="mb-3">
+                                                        <label for="example-date" class="form-label">Posisi</label>
+                                                        <input type="text" id="projectname" name="posisi" class="form-control" placeholder="Posisi Saat ini">
+                                                    </div>
 
-                                                <div class="mb-3">
-                                                    <label for="example-date" class="form-label">Foto</label>
-                                                    <input type="file" id="projectname" name="foto" class="form-control" placeholder="Posisi Saat ini">
-                                                </div>
+                                                    <div class="mb-3">
+                                                        <label for="example-date" class="form-label">Foto</label>
+                                                        <input type="file" id="projectname" name="foto" class="form-control" placeholder="Posisi Saat ini">
+                                                    </div>
 
-                                                <div class="mb-3">
-                                                    <label for="example-date" class="form-label">Tanggal</label>
-                                                    <input class="form-control" id="example-date" type="date" name="tanggal">
-                                                </div>
+                                                    <div class="mb-3">
+                                                        <label for="example-date" class="form-label">Tanggal</label>
+                                                        <input class="form-control" id="example-date" type="date" name="tanggal">
+                                                    </div>
 
-                                            </div> <!-- end col-->
+                                                </div> <!-- end col-->
 
-                                            <div class="col-xl-6">
-                                            <p>Biografi</p>
-                                            <textarea name="biografi" ></textarea>
-                                                    <script>
+                                                <div class="col-xl-6">
+                                                <p>Biografi</p>
+                                        
+                                                    <textarea class="form-control" name="biografi" id="" cols="30" rows="10"></textarea>
+                                                    {{-- <script>
                                                             CKEDITOR.replace( 'biografi' );
-                                                    </script>
-
-                                               
-
+                                                    </script> --}}
                                                             <!-- Preview -->
                                                             <div class="dropzone-previews mt-3" id="file-previews"></div>
 
@@ -85,8 +82,6 @@
                                                     </form>
                                                 </div>
                                                 <!-- end row -->
-
-
                                             <div class="col-12">
                                                 <div class="card">
                                                     <div class="card-body">
@@ -99,6 +94,7 @@
                                                                             <th>Jabatan</th>
                                                                             <th>Biografi</th>
                                                                             <th>Foto</th>
+                                                                            <th>Action</th>
                                                                             
                                                                         </tr>
                                                                     </thead>
@@ -106,16 +102,13 @@
                                                                     @foreach ($data as $tampilkan)
                                                                     <tbody>
                                                                         <tr style="text-align: center;">
-                                                                        <td>{{$tampilkan->nama}}</td>
-                                                                        <td>{{$tampilkan->posisi}}</td>
-                                                                        <td><?php
-                                                                            foreach ($data as $item){
-                                                                            echo $item->biografi;
-                                                                            }?>
-                                                                        </td>
-                                                                        <td><img src="{{ asset('/assets_foto_exp_team/'.$tampilkan->foto) }}" alt="" style="width: 80px; height: 80px;"></td>
+                                                                            <td>{{$tampilkan->nama}}</td>
+                                                                            <td>{{$tampilkan->posisi}}</td>
+                                                                            <td>{{$tampilkan->biografi}}</td>
+                                                                            <td><img src="{{ asset('/assets_foto_exp_team/'.$tampilkan->foto) }}" alt="" style="width: 80px; height: 80px;"></td>
+                                                                            <td><button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal{{$tampilkan->id}}" data-bs-whatever="@mdo"><i class="material-icons " style="color: green;" data-toggle="tooltip" title="Delete">&#xE8B8;</button>
+                                                                            <a href="/del_exp_team/{{ $tampilkan->id}}" class="delete"><i class="material-icons " style="color: red;" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
                                                                         </tr>
-                                                                    
                                                                     @endforeach
                                                                     </tbody>
                                                                 

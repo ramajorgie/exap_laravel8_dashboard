@@ -79,6 +79,7 @@ Route::post('/lihat_project',[ListController::class, 'view_project']);
 Route::get('/hapus_project/{id}',[DeleteController::class, 'detele_project']);
 Route::get('/delete_account/{id}',[DeleteController::class, 'detele_account']);
 Route::get('/delete_album/{id}',[DeleteController::class, 'detele_album']);
+Route::get('/del_exp_team/{id}',[DeleteController::class, 'del_exp_team']);
 
 Route::get('/post_about',[PostController::class, 'view_about']);
 
@@ -88,6 +89,7 @@ Route::post('/user_add',[AccountController::class, 'add_account']);
 Route::get('/account',[AccountController::class, 'view_account']);
 
 Route::post('/update_status',[AccountController::class, 'update_user_status']);
+Route::post('/update_team',[ListController::class, 'update_team']);
 
 Route::get('/view_album',[PostController::class, 'view_album']);
 

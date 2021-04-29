@@ -23,5 +23,10 @@ class DeleteController extends Controller
         return redirect()->back();
     }
 
+    public function del_exp_team(Request $request){
+        DB::table('exp_team')->where('id','=', $request->id)->delete();
+        return redirect()->back();
+    }
+
 
 }
