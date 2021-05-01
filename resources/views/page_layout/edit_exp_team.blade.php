@@ -27,10 +27,10 @@
                                                 <input type="text" id="projectname" name="posisi" class="form-control" value="{{$item->posisi}}">
                                             </div>
 
-                                            <div class="mb-3">
+                                            <div class="mb-3">p
                                                 <label for="example-date" class="form-label">Foto</label>
                                                 <img style="width: 200px; height: 130px;" src="{{ asset('/assets_foto_exp_team/'.$item->foto) }}" alt="">
-                                                input type="file" id="projectname" name="foto" class="form-control" placeholder="Posisi Saat ini">
+                                                <input type="file" id="projectname" name="foto" class="form-control" placeholder="Posisi Saat ini">
                                             </div>
                                         </div>
 

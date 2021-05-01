@@ -56,8 +56,8 @@ class ListController extends Controller
     
     public function view_edit_team(Request $request){
         $view_edit_team = DB::table('exp_team')->where('id',$request->id)->get();
-        return dd($request->id);
-        // return view('page_layout.edit_exp_team',['view' => $view_edit_team]);
+       
+        return view('page_layout.edit_exp_team',['view' => $view_edit_team]);
     }
 
 
