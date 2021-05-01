@@ -106,7 +106,7 @@
                                                                             <td>{{$tampilkan->posisi}}</td>
                                                                             <td>{{$tampilkan->biografi}}</td>
                                                                             <td><img src="{{ asset('/assets_foto_exp_team/'.$tampilkan->foto) }}" alt="" style="width: 80px; height: 80px;"></td>
-                                                                            <td><button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal{{$tampilkan->id}}" data-bs-whatever="@mdo"><i class="material-icons " style="color: green;" data-toggle="tooltip" title="Delete">&#xE8B8;</button>
+                                                                            <td><a href="/view_edit_team">&#xE8B8;</a>
                                                                             <a href="/del_exp_team/{{ $tampilkan->id}}" class="delete"><i class="material-icons " style="color: red;" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
                                                                         </tr>
                                                                     @endforeach

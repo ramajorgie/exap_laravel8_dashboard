@@ -176,16 +176,14 @@
                 <h5 class="wow fadeInUp" data-wow-delay=".4s">Vision</h5>
                 <?php
                 foreach ($visi as $item){
-                  echo '<p style="color:white;">'. $item->visi_misi .'</p>';
+                  echo '<p style="color:white;">'. nl2br($item->visi_misi) .'</p>';
                 }?>
-                
               </div>
-            
               <div class="section-title text-center mb-25">
                 <h5 class="wow fadeInUp" data-wow-delay=".4s">Mission</h5>
                 <?php
                 foreach ($misi as $item){
-                  echo '<p style="color:white;">'. $item->visi_misi .'</p>';
+                  echo '<p style="color:white;">'. nl2br($item->visi_misi) .'</p>';
                 }?>
               </div>
             

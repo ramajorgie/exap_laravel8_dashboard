@@ -51,9 +51,14 @@ class ListController extends Controller
 
     public function view_team(){
         $view_team = DB::table('exp_team')->get();
-        view('page_layout.edit_exp_team',['data' => $view_team]);
         return view('page_layout.form_exp_team',['data' => $view_team]);
     }
+    
+    public function view_edit_team(Request $request){
+        $view_team = DB::table('exp_team')->where('id',$request->id)->get();
+        return view('page_layout.edit_exp_team',['data' => $view_team]);
+    }
+
 
     public function update_team (Request $request){
         if($request->foto == null){

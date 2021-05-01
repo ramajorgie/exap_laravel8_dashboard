@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Blade;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -24,5 +25,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
-    }
+        Blade::directive('nl2br', function ($string) {
+            return "<?php echo nl2br(htmlentities($string)); ?>";
+});
+}
 }

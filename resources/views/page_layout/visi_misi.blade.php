@@ -28,10 +28,11 @@
                                         @foreach ($visi as $item)
                                         <div class="mb-3">
                                             <label for="projectname" class="form-label">Vision</label>
-                                            <input type="text" id="projectname" name="isi" value="{{ $item->visi_misi }}" class="form-control" >
+                                            {{--  <input type="text" id="projectname" name="isi" value="{{ $item->visi_misi }}" class="form-control" >  --}}
+                                            <textarea class="form-control" name="isi"  cols="30" rows="10">{{$item->visi_misi}}</textarea>
                                         </div>
                                         @endforeach
-
+                                        
                                      
                                                 <div style="text-align: center; margin-top: 10px;">
                                                 <button class="btn btn-success" type="submit">update vision</button>
@@ -46,10 +47,10 @@
                                         @foreach ($misi as $item)
                                         <div class="mb-3">
                                             <label for="projectname" class="form-label">Mission</label>
-                                            <input type="text" id="projectname" name="isi" value="{{ $item->visi_misi }}" class="form-control" >
+                                            {{--  <input type="text" id="projectname" name="isi" value="{{ $item->visi_misi }}" class="form-control" >  --}}
+                                            <textarea class="form-control" name="isi"  cols="30" rows="10">{{$item->visi_misi}}</textarea>
                                         </div>
                                         @endforeach
-                                        <br>
   
                                         
                                                 <div style="text-align: center; margin-top: 10px;">
