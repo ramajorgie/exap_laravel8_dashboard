@@ -74,7 +74,7 @@ Route::post('/add_exp_team',[PostController::class, 'exp_team']);
 
 
 Route::get('/view_post',[ListController::class, 'list_project']);
-Route::post('/view_edit_team',[ListController::class, 'view_edit_team']);
+Route::get('/view_edit_team',[ListController::class, 'view_edit_team']);
 Route::get('/update_tampilan_project',[ListController::class, 'update_view_project']);
 Route::post('/lihat_project',[ListController::class, 'view_project']);
 Route::get('/hapus_project/{id}',[DeleteController::class, 'detele_project']);

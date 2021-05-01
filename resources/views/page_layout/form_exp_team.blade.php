@@ -106,7 +106,10 @@
                                                                             <td>{{$tampilkan->posisi}}</td>
                                                                             <td>{{$tampilkan->biografi}}</td>
                                                                             <td><img src="{{ asset('/assets_foto_exp_team/'.$tampilkan->foto) }}" alt="" style="width: 80px; height: 80px;"></td>
-                                                                            <td><a href="/view_edit_team">&#xE8B8;</a>
+                                                                            <form action="/view_edit_team" method="get">
+                                                                            @csrf
+                                                                            <td><button class="btn btn-info" type="submit">lihat</button>
+                                                                            </form>
                                                                             <a href="/del_exp_team/{{ $tampilkan->id}}" class="delete"><i class="material-icons " style="color: red;" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
                                                                         </tr>
                                                                     @endforeach

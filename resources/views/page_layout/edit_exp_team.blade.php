@@ -1,7 +1,7 @@
 @extends('page_core.app')  
    <!-- partial -->
    @section('konten')
-                @foreach ($data as $item)
+                
                     
                 
                
@@ -9,6 +9,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
+                                @foreach ($view as $item)
                                 <form action="/update_team" method="post" enctype="multipart/form-data">
                                 @csrf
                                     <div class="row">
@@ -67,10 +68,11 @@
                                         </div>
                                     </div>
                                 </form>
+                                @endforeach
                             </div>
                         </div>
                     </div>
                 </div>
-                @endforeach
+               
                     
     @endsection
