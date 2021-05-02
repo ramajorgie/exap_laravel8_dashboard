@@ -65,10 +65,12 @@ class PostController extends Controller
         $data = DB::table('post_about')->get();
         $view_visi = DB::table('data_visi_misi')->where('status','visi')->get();
         $view_misi = DB::table('data_visi_misi')->where('status','Misi')->get();
+        $view_team = DB::table('exp_team')->get();
         return view('page_view.about',[
-            'data'=>$data,
-            'visi'=>$view_visi,
-            'misi'=>$view_misi
+            'data'      => $data,
+            'visi'      => $view_visi,
+            'misi'      => $view_misi,
+            'data_team' => $view_team
             ]);
     }
 
@@ -99,6 +101,8 @@ class PostController extends Controller
         return view('page_layout.list_postalbum',['data'=>$data_album]);
     }
 
+    
+
     public function view_experience_team()
     {      
         $data = DB::table('post_about')->get();
@@ -107,7 +111,11 @@ class PostController extends Controller
 
     public function view_project_front(){
         $tampilkan_project = DB::table('post_project')->where('status','Tampilkan')->get();
-        return view('page_view.project',['data'=>$tampilkan_project]);
+        $all_project_view = DB::table('post_project')->get();
+        return view('page_view.project',[
+            'data'=>$tampilkan_project,
+            'all_data'=>$all_project_view
+            ]);
     }
 
     public function exp_team(Request $request){
@@ -135,6 +143,7 @@ class PostController extends Controller
         
         return redirect()->back()->with('success', 'Berhasil Diupdate');
     }
+    
     public function update_misi (Request $request){
 
         DB::table('data_visi_misi')->where('status','misi') 
@@ -145,28 +154,12 @@ class PostController extends Controller
         return redirect()->back()->with('success', 'Berhasil Diupdate');
     }
 
-    // public function post_about(Request $request){
-
-
-    //     DB::table('post_about')->where('bahasa',$request->bahasa)
-    //     ->update([
-    //      'judul_about' => $request->input('judul_about'),
-    //      'isi'         => $request->input('isi_about'),
-    //      'waktu'       => date('Y-m-d'),
-    //      'bahasa'      => $request->input('bahasa'),
-    //      ]);
-        
-    //     return redirect()->back()->with('success', 'About Berhasil Diperbaruhi');
-    // }
-
-
     public function update_project (Request $request){
             if($request->foto == null){
                 DB::table('post_project')->where('id',$request->id)
                 ->update([
                  'judul_project'     =>$request->judul_project,
                  'isi'               =>$request->isi,
-                
                 ]);
             }
             else{
@@ -183,5 +176,27 @@ class PostController extends Controller
         return redirect('/view_post');
     }
     
-
+    public function update_team (Request $request){
+        if($request->foto == null){
+            DB::table('exp_team')->where('id',$request->id)
+            ->update([
+             'nama'     =>$request->nama,
+             'posisi'   =>$request->posisi,
+             'biografi' =>$request->biografi,
+            ]);
+        }
+        else{
+            $imageName = time().'.'.$request->foto->extension();  
+            $request->foto->move(public_path('assets_foto_exp_team'), $imageName);
+            DB::table('exp_team')->where('id',$request->id)
+            ->update([
+             'nama'     =>$request->nama,
+             'posisi'   =>$request->posisi,
+             'biografi' =>$request->biografi,
+             'foto'     =>$imageName,
+            ]);
+        }
+    
+    return redirect('/exp_team');
+    }
 }

@@ -92,7 +92,7 @@
                           <a class="{{ Request::is('about*') ? 'active' : '' }}" href="/about">About</a>
                         </li>
                         <li class="nav-item active">
-                          <a class="{{ Request::is('service*') ? 'active' : '' }}" href="/service">Bussiness Scope</a>
+                          <a class="{{ Request::is('bussiness*') ? 'active' : '' }}" href="/bussiness">Bussiness Scope</a>
                         </li>
                         <li class="nav-item active">
                           <a class="{{ Request::is('project*') ? 'active' : '' }}" href="/project">Project</a>
@@ -197,11 +197,11 @@
                 <div class="footer-widget mb-30">
                   <h4>Menu</h4>
                   <ul class="footer-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="{{url('/')}}">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/bussiness">bussiness</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/contact">Contact</a></li>
                   </ul>
                 </div>
               </div>

@@ -18,36 +18,31 @@
                                                 <div class="col-xl-6">
                                                     <div class="mb-3">
                                                         <label for="projectname" class="form-label">Nama</label>
-                                                        <input type="text" id="projectname" name="nama" class="form-control" placeholder="Masukan Nama">
+                                                        <input type="text" id="projectname" name="nama" class="form-control" placeholder="Masukan Nama" required>
                                                     </div>
 
                                                     <div class="mb-3">
                                                         <label for="example-date" class="form-label">Posisi</label>
-                                                        <input type="text" id="projectname" name="posisi" class="form-control" placeholder="Posisi Saat ini">
+                                                        <input type="text" id="projectname" name="posisi" class="form-control" placeholder="Posisi Saat ini" required>
                                                     </div>
 
                                                     <div class="mb-3">
                                                         <label for="example-date" class="form-label">Foto</label>
-                                                        <input type="file" id="projectname" name="foto" class="form-control" placeholder="Posisi Saat ini">
+                                                        <input type="file" id="projectname" name="foto" class="form-control" placeholder="Posisi Saat ini" required>
                                                     </div>
 
                                                     <div class="mb-3">
                                                         <label for="example-date" class="form-label">Tanggal</label>
-                                                        <input class="form-control" id="example-date" type="date" name="tanggal">
+                                                        <input class="form-control" id="example-date" type="date" name="tanggal" required>
                                                     </div>
 
                                                 </div> <!-- end col-->
 
                                                 <div class="col-xl-6">
                                                 <p>Biografi</p>
-                                        
-                                                    <textarea class="form-control" name="biografi" id="" cols="30" rows="10"></textarea>
-                                                    {{-- <script>
-                                                            CKEDITOR.replace( 'biografi' );
-                                                    </script> --}}
+                                                    <textarea class="form-control" name="biografi" id="" cols="30" rows="10" required></textarea>
                                                             <!-- Preview -->
                                                             <div class="dropzone-previews mt-3" id="file-previews"></div>
-
                                                             <!-- file preview template -->
                                                             <div class="d-none" id="uploadPreviewTemplate">
                                                                 <div class="card mt-1 mb-0 shadow-none border">
@@ -109,7 +104,7 @@
                                                                             <form action="/view_edit_team" method="get">
                                                                             @csrf
                                                                             <input type="id" value="{{$tampilkan->id}}" name="id" hidden> 
-                                                                            <td><button class="btn btn-info" type="submit">lihat</button>
+                                                                            <td><button class="btn btn-info" type="submit">Edit</button>
                                                                             </form>
                                                                             <a href="/del_exp_team/{{ $tampilkan->id}}" class="delete"><i class="material-icons " style="color: red;" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
                                                                         </tr>

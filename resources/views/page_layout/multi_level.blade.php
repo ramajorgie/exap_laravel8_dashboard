@@ -5,12 +5,12 @@
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h2 class="header-title" > Add Mamber</h2>
+                                        <h2 class="header-title" >Mambers</h2>
                                         <p>
                                         Berikut Ini list Member Yang terdaftar :
                                         </p>
                                         <div style="text-align: right;">
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Add New Members</button>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Add New Member</button>
                                         </div>
                                         <div class="tab-content">
                                             <div class="tab-pane show active" id="basic-datatable-preview">
@@ -21,7 +21,7 @@
                                                             <th>Email</th>
                                                             <th>Status</th>
                                                             <th>Foto</th>
-                                                            <th>opt</th>
+                                                            <th>Action</th>
                                                         </tr>
                                                     </thead>
                                                 
@@ -62,26 +62,26 @@
                                             @csrf
                                             <div class="mb-3">
                                                 <label for="recipient-name" class="col-form-label">Nama:</label>
-                                                <input type="text" name="nama" class="form-control" id="recipient-name">
+                                                <input type="text" name="nama" class="form-control" id="recipient-name" required>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="recipient-name" class="col-form-label">Email:</label>
-                                                <input type="text" class="form-control" name="email" id="recipient-name">
+                                                <input type="text" class="form-control" name="email" id="recipient-name" required>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="recipient-name" class="col-form-label">Status:</label>
-                                                <select class="form-select" aria-label="Default select example" name="status">
+                                                <select class="form-select" aria-label="Default select example" name="status" required>
                                                 
                                                 <option selected value="Admin">Admin</option>
                                                 </select>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="recipient-name" class="col-form-label">Password:</label>
-                                                <input type="text" class="form-control" id="recipient-name" name="password">
+                                                <input type="text" class="form-control" id="recipient-name" name="password" required>
                                             </div>
                                             <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button type="submit" class="btn btn-primary">Send message</button>
+                                            <button type="submit" class="btn btn-primary">Add Member</button>
                                         </div>
                                             
                                             </form>
@@ -91,6 +91,7 @@
                                     </div>
                                     </div>
 
+                                    {{--  Edit --}}
                                     @foreach ($data as $tampilkan)
                                     <div class="modal fade" id="exampleModal{{$tampilkan->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
@@ -100,8 +101,6 @@
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
-                                                <form action="/update_status" method="post">
-                                                @csrf
                                                 <div class="mb-3">
                                                     <label for="recipient-name" class="col-form-label">Email:</label>
                                                     <input type="text" class="form-control" name="email" id="recipient-name" value="{{$tampilkan->email}}" readonly>

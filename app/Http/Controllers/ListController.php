@@ -60,32 +60,6 @@ class ListController extends Controller
         return view('page_layout.edit_exp_team',['view' => $view_edit_team]);
     }
 
-
-    public function update_team (Request $request){
-        if($request->foto == null){
-            DB::table('exp_team')->where('id',$request->id)
-            ->update([
-             'nama'     =>$request->nama,
-             'posisi'   =>$request->posisi,
-             'biografi' =>$request->biografi
-            
-            ]);
-        }
-        else{
-            $imageName = time().'.'.$request->foto->extension();  
-            $request->foto->move(public_path('assets_foto_exp_team'), $imageName);
-            DB::table('exp_team')->where('id',$request->id)
-            ->update([
-             'nama'     =>$request->nama,
-             'posisi'   =>$request->posisi,
-             'biografi' =>$request->biografi,
-             'foto'     =>$imageName,
-            ]);
-        }
-    
-    return redirect('/exp_team');
-}
-
     public function view_visi_misi(){
         $view_visi = DB::table('data_visi_misi')->where('status','visi')->get();
         $view_misi = DB::table('data_visi_misi')->where('status','Misi')->get();

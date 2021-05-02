@@ -22,7 +22,7 @@
                                                             <th>Isi Materi</th>
                                                             <th>Waktu</th>
                                                             <th>Bahasa</th>
-                                                            <th>Foto</th>
+                                                            <th>Thumbnail</th>
                                                             <th>Status</th>
                                                             <th>Action</th>
                                                             <th>Hapus</th>
@@ -34,7 +34,7 @@
                                                         <tr style="text-align: center;">
                                                             <td>{{$list->judul_project}}</td>
                                                             <td>
-                                                            <form action="/lihat_project" method="post">
+                                                            <form action="/lihat_project" method="get">
                                                             @csrf
                                                             <input type="text" value="{{$list->id}}" name="id" hidden>
                                                             <button class="btn btn-info"> lihat</button>
@@ -46,14 +46,14 @@
                                                             <td>{{$list->status}}</td>
                                                             <td>
                                                             @if ( $list->status == "Tampilkan")
-                                                            <form action="/update_tampilan_project" method="post">
+                                                            <form action="/update_tampilan_project" method="get">
                                                             @csrf
                                                             <input type="text" value="{{$list->id}}" name="id" hidden>
                                                             <input type="text" value="{{$list->status}}" name="status" hidden>
                                                             <button class="btn btn-danger" type="submit">Close</button>
                                                             </form>
                                                             @elseif ( $list->status == "Sembunyikan")
-                                                            <form action="/update_tampilan_project" method="post">
+                                                            <form action="/update_tampilan_project" method="get">
                                                             @csrf
                                                             <input type="text" value="{{$list->id}}" name="id" hidden>
                                                             <input type="text" value="{{$list->status}}" name="status" hidden>
