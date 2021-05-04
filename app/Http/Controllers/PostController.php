@@ -199,4 +199,27 @@ class PostController extends Controller
     
     return redirect('/exp_team');
     }
+
+    public function view_blog(){
+
+        $view = DB::table('post_blog')->get();
+        return view('page_layout.blog_view',['data' => $view]);
+    }
+
+    public function add_blog(Request $request){
+        $imageName = time().'.'.$request->foto->extension();  
+        $request->foto->move(public_path('assets_post_blog'), $imageName);
+
+
+        DB::table('post_blog')
+            ->insert([
+             'judul_blog'    =>$request->judul_blog,
+             'tanggal'       =>$request->tanggal,
+             'isi'           =>$request->isi,
+             'foto'          =>$imageName,
+            ]);
+            return redirect()->back()->with('success', 'Berhasil DiTambahkan');
+    }
+
+    
 }
