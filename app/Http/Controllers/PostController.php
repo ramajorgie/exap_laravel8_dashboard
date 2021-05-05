@@ -137,9 +137,9 @@ class PostController extends Controller
     public function update_visi (Request $request){
 
         DB::table('data_visi_misi')->where('status','visi') 
-         ->update([
-          'visi_misi' => $request->isi
-         ]);
+        ->update([
+        'visi_misi' => $request->isi
+        ]);
         
         return redirect()->back()->with('success', 'Berhasil Diupdate');
     }
