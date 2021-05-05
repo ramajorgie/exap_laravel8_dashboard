@@ -103,7 +103,12 @@
                             </div>
                         </li>
 
-
+                        <li class="side-nav-item">
+                            <a href="/view_blog" class="side-nav-link">
+                                <i class="uil-copy-alt"></i>
+                                <span>Blog </span>
+                            </a>
+                        </li>
 
                         <li class="side-nav-item">
                             <a data-bs-toggle="collapse" href="#sidebarEcommerce" aria-expanded="false" aria-controls="sidebarEcommerce" class="side-nav-link">

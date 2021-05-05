@@ -38,6 +38,10 @@ Route::get('/bussiness', function () {
 Route::get('/login', function () {
     return view('home.login');
 });
+
+Route::get('/add_blog', function () {
+    return view('page_layout.form_blog');
+});
 Route::post('login', [LoginController::class, 'login'])->name('login');
 
 Route::group(['middleware' => 'auth'], function() {
@@ -80,4 +84,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::post('/insert_postalbum',[PostController::class, 'post_album']);
     Route::post('/insert_postproject',[PostController::class, 'post_project']);
     Route::get('logout', [LoginController::class, 'logout'])->name('logout');
+
+    Route::get('/view_blog',[PostController::class, 'view_blog']);
+    Route::post('/proses_add_blog',[PostController::class, 'add_blog']);
 });
