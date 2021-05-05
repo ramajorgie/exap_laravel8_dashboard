@@ -68,4 +68,10 @@ class ListController extends Controller
             'misi' => $view_misi
             ]);
     }
+
+    public function view_edit_blog(Request $request){
+        $view_edit_blog = DB::table('blogs')->where('id',$request->id)->get();
+       
+        return view('page_layout.blog_view_edit',['data' => $view_edit_blog]);
+    }
 } 

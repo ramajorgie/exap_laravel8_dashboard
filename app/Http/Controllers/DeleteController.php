@@ -28,5 +28,10 @@ class DeleteController extends Controller
         return redirect()->back();
     }
 
+    public function del_blog(Request $request){
+        DB::table('blogs')->where('id','=', $request->id)->delete();
+        return redirect()->back();
+    }
+
 
 }

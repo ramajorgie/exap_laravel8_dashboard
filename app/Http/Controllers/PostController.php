@@ -202,8 +202,16 @@ class PostController extends Controller
 
     public function view_blog(){
 
-        $view = DB::table('post_blog')->get();
+        $view = DB::table('blogs')->get();
         return view('page_layout.blog_view',['data' => $view]);
+    }
+    public function view_blog_front(){
+        $views = DB::table('blogs')->get();
+        $view_last_blog = DB::table('view_last_blog')->get();
+        return view('page_view.blog',[
+            'views_blog'=> $views,
+            'views_last'=> $view_last_blog
+            ]);
     }
 
     public function add_blog(Request $request){
@@ -211,15 +219,37 @@ class PostController extends Controller
         $request->foto->move(public_path('assets_post_blog'), $imageName);
 
 
-        DB::table('post_blog')
+        DB::table('blogs')
             ->insert([
              'judul_blog'    =>$request->judul_blog,
-             'tanggal'       =>$request->tanggal,
+             'waktu'       =>$request->waktu,
              'isi'           =>$request->isi,
              'foto'          =>$imageName,
             ]);
             return redirect()->back()->with('success', 'Berhasil DiTambahkan');
     }
 
+    public function update_blog (Request $request){
+        if($request->foto == null){
+            DB::table('blogs')->where('id',$request->id)
+            ->update([
+             'judul_blog'    =>$request->judul_blog,
+             'waktu'         =>$request->waktu,
+             'isi'           =>$request->isi
+            ]);
+        }
+        else{
+            $imageName = time().'.'.$request->foto->extension();  
+            $request->foto->move(public_path('assets_post_blog'), $imageName);
+            DB::table('blogs')->where('id',$request->id)
+            ->update([
+                'judul_blog'    =>$request->judul_blog,
+                'waktu'         =>$request->waktu,
+                'isi'           =>$request->isi,
+                'foto'          =>$imageName
+            ]);
+        }
     
+        return redirect()->back()->with('success', 'Berhasil Di Update');
+    }
 }

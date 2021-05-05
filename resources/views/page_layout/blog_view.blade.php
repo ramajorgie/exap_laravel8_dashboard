@@ -27,14 +27,21 @@
                                                         </tr>
                                                     </thead>
                                                 
-                                               @foreach ($data as $tampilkam)
+                                               @foreach ($data as $tampilkan)
                                                     <tbody>
                                                         <tr style="text-align: center;">
-                                                            <td><img src="{{ asset('/assets_post_blog/'.$tampilkam->foto) }}" alt="" style="width: 80px; height: 80px;"></td></td>
-                                                            <td>{{$tampilkam->judul_blog}}</td>
-                                                            <td><?php echo $tampilkam->isi?></td>
-                                                            <td>{{$tampilkam->tanggal}}</td>
-                                                            <td></td>
+                                                            <td><img src="{{ asset('/assets_post_blog/'.$tampilkan->foto) }}" alt="" style="width: 80px; height: 80px;"></td></td>
+                                                            <td>{{$tampilkan->judul_blog}}</td>
+                                                            <td><?php echo $tampilkan->isi?></td>
+                                                            <td>{{$tampilkan->waktu}}</td>
+                                                            <td>
+                                                                <a href="/del_blog/{{ $tampilkan->id}}" class="delete"><i class="material-icons " style="color: red;" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                                                <form action="/view_edit_blog" method="get">
+                                                                    @csrf
+                                                                    <input type="text" value="{{$tampilkan->id}}" name="id" hidden>
+                                                                    <button class="btn btn-info"> lihat</button>
+                                                                </form>
+                                                            </td>
                                                            
                                                         </tr>
                                                        

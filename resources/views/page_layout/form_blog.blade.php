@@ -24,7 +24,7 @@
                                         @endif
                                         <div class="mb-3">
                                                     <label for="example-date" class="form-label">Waktu</label>
-                                                    <input class="form-control" id="example-date" type="date" name="tanggal" style="text-align: center;" required>
+                                                    <input class="form-control" id="example-date" type="date" name="waktu" style="text-align: center;" required>
                                         </div>
                                         
                                         <div class="mb-3">

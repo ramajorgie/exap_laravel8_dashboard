@@ -103,11 +103,29 @@
                             </div>
                         </li>
 
-                        <li class="side-nav-item">
+                        {{--  <li class="side-nav-item">
                             <a href="/view_blog" class="side-nav-link">
                                 <i class="uil-copy-alt"></i>
                                 <span>Blog </span>
                             </a>
+                        </li>  --}}
+
+                        <li class="side-nav-item">
+                            <a data-bs-toggle="collapse" href="#sidebarBlog" aria-expanded="false" aria-controls="sidebarBlog" class="side-nav-link">
+                                <i class="uil-store"></i>
+                                <span> Blogs </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <div class="collapse" id="sidebarBlog">
+                                <ul class="side-nav-second-level">
+                                    <li>
+                                        <a href="/add_blog">Post Blog</a>
+                                    </li>
+                                    <li>
+                                        <a href="/view_blog">List Blogs</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
 
                         <li class="side-nav-item">
