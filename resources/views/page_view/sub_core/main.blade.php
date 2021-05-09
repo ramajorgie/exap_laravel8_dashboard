@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/x-icon" href="{{URL::asset('/assets_login/images/icon-noor.png')}}" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    
     <link rel="stylesheet" href="{{URL::asset('assets_view')}}/css/bootstrap-5.0.5-alpha.min.css" />
     <link rel="stylesheet" href="{{URL::asset('assets_view')}}/css/LineIcons.2.0.css" />
     <link rel="stylesheet" href="{{URL::asset('assets_view')}}/css/glightbox.min.css" />
@@ -202,7 +202,7 @@
       <a href="#" class="scroll-top">
         <i class="lni lni-arrow-up"></i>
       </a>
-
+    
     <script data-cfasync="false" src="{{URL::asset('assets_view')}}../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="{{URL::asset('assets_view')}}/js/bootstrap.bundle-5.0.0.alpha-min.js"></script>
     <script src="{{URL::asset('assets_view')}}/js/contact-form.js"></script>

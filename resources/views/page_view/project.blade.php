@@ -3,7 +3,15 @@
 @section('title','Project')
 
 @section('container')
-
+<script>
+  (function($) {
+    $(function() {
+        $('.carousel').jcarousel({
+            wrap: 'circular'
+        });
+    });
+})(jQuery)
+</script>
 <section id="about" class="about-section pt-40">
   <div class="container">
     <div class="row">
@@ -54,14 +62,13 @@
                     <div class="carousel-item active">
                         <div class="row">
                             
-                            @foreach ($all_data as $item)
-                            <div class="col-md-4 mb-3">
-                                <div class="card">
-                                    <img class="img-fluid" alt="100%x280" src="{{ asset('/assets_foto_post/'.$tampil->foto) }}">
-                                </div>
+                          @foreach ($all_data as $item)
+                          <div class="col-md-4 mb-3">
+                            <div class="card">
+                                <img class="img-fluid" alt="100%x280" src="{{ asset('/assets_foto_post/'.$tampil->foto) }}">
                             </div>
-                            @endforeach
-                            
+                          </div>
+                          @endforeach
                         </div>
                     </div>
                 </div>
@@ -70,5 +77,6 @@
     </div>
   </div>
 </section>
+
 
 @endsection
