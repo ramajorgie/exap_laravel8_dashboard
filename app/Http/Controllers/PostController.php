@@ -224,6 +224,7 @@ class PostController extends Controller
              'judul_blog'    =>$request->judul_blog,
              'waktu'       =>$request->waktu,
              'isi'           =>$request->isi,
+             'isi_thumbnail' =>$request->isi_thumbnail,
              'foto'          =>$imageName,
             ]);
             return redirect()->back()->with('success', 'Berhasil DiTambahkan');
@@ -235,7 +236,8 @@ class PostController extends Controller
             ->update([
              'judul_blog'    =>$request->judul_blog,
              'waktu'         =>$request->waktu,
-             'isi'           =>$request->isi
+             'isi'           =>$request->isi,
+             'isi_thumbnail' =>$request->isi_thumbnail
             ]);
         }
         else{
@@ -246,6 +248,7 @@ class PostController extends Controller
                 'judul_blog'    =>$request->judul_blog,
                 'waktu'         =>$request->waktu,
                 'isi'           =>$request->isi,
+                'isi_thumbnail' =>$request->isi_thumbnail,
                 'foto'          =>$imageName
             ]);
         }

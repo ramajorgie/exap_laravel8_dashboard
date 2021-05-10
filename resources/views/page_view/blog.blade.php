@@ -14,7 +14,7 @@
             <div class="section-title text-center mb-55">
               <span class="wow fadeInDown" data-wow-delay=".2s">Blog Post</span>
               <h2 class="mb-15 wow fadeInUp" data-wow-delay=".4s">Latest News</h2>
-              <p class="wow fadeInUp" data-wow-delay=".4s">{!! nl2br($item->isi) !!}</p>
+              <p class="wow fadeInUp" data-wow-delay=".4s">{!! nl2br($item->isi_thumbnail) !!}</p>
             </div>
           </div>
           @endforeach
@@ -28,7 +28,7 @@
               </div>
               <div class="blog-content">
                 <h4><a href="#">{{ $item->judul_blog }}</a></h4>
-                <p>{!! nl2br($item->isi) !!}</p>
+                <p>{!! nl2br($item->isi_thumbnail) !!}</p>
                 <a class="read-more" href="#">Read More <i class="lni lni-arrow-right"></i></a>
               </div>
             </div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 02 Bulan Mei 2021 pada 11.23
+-- Waktu pembuatan: 10 Bulan Mei 2021 pada 03.37
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.3.18
 
@@ -24,24 +24,28 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `account`
+-- Struktur dari tabel `blogs`
 --
 
-CREATE TABLE `account` (
-  `id` int(11) NOT NULL,
-  `username` varchar(500) NOT NULL,
-  `email` varchar(500) NOT NULL,
-  `password` varchar(500) NOT NULL,
-  `level_account` int(11) NOT NULL,
-  `status` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE `blogs` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `judul_blog` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `isi` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `isi_thumbnail` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `foto` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `waktu` date NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `account`
+-- Dumping data untuk tabel `blogs`
 --
 
-INSERT INTO `account` (`id`, `username`, `email`, `password`, `level_account`, `status`) VALUES
-(1, 'Super Admin', 'noor@gmail.com', 'noor', 1, 'Super Admin');
+INSERT INTO `blogs` (`id`, `judul_blog`, `isi`, `isi_thumbnail`, `foto`, `waktu`, `created_at`, `updated_at`) VALUES
+(7, 'satu', '<p>Kemudian buat bootstrap master template dengan mengetikan&nbsp;b4-&nbsp;nanti pilih yang&nbsp;b4-$, ini akan bisa jika kalau memakai vscode dengan extension bootstrap4 snippets. Atau kalao selain vscode ketikan dibawah ini</p>', '<p>Kemudian buat bootstrap master template dengan mengetikan&nbsp;b4-&nbsp;nanti pilih yang&nbsp;b4-$, ini akan bisa jika kalau memakai vscode dengan extension bootstrap4 snippets. Atau kalao selain vscode ketikan dibawah ini</p>', '1620572237.jpg', '2021-05-09', NULL, NULL),
+(8, 'dua', '<p>Kemudian buat bootstrap master template dengan mengetikan&nbsp;b4-&nbsp;nanti pilih yang&nbsp;b4-$, ini akan bisa jika kalau memakai vscode dengan extension bootstrap4 snippets. Atau kalao selain vscode ketikan dibawah ini</p>', '<p>Kemudian buat bootstrap master template dengan mengetikan&nbsp;b4-&nbsp;nanti pilih yang&nbsp;b4-$, ini akan bisa jika kalau memakai vscode dengan extension bootstrap4 snippets. Atau kalao selain vscode ketikan dibawah ini</p>', '1620572264.jpg', '2021-05-09', NULL, NULL),
+(9, 'tiga', '<p>W3Schools is optimized for learning and training. Examples might be simplified to improve reading and learning. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using W3Schools, you agree to have read and accepted our&nbsp;<a href=\"https://www.w3schools.com/about/about_copyright.asp\">terms of use</a>,&nbsp;<a href=\"https://www.w3schools.com/about/about_privacy.asp\">cookie and privacy</a></p>', '<p>adang saya membutuhkan query untuk memanggil data terbaru dari tabel MySQL. Tapi, sering lupa. Berikut ini saya jelaskan tentang penggunaan query MySQL untuk menampilkan data terbaru sekaligus untuk catatan pribadi buat saya kalau besok lupa lagi.</p>', '1620574779.png', '2021-05-09', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -66,7 +70,9 @@ CREATE TABLE `contact` (
 INSERT INTO `contact` (`id`, `nama`, `email`, `subject`, `msg`, `status`, `waktu`) VALUES
 (3, 'rama andika jorgie', 'ramaandikajorgie@gmail.com', 'kunam 123', 'Menurut Kamus Besar Bahasa Indonesia (KBBI), artikel merupakan suatu karya tulis yang ditulis secara lengkap.\r\n\r\nAdapun tujuan secara umum dari pembuatan artikel ialah untuk memengaruhi, mendidik, memberitahu, meyakinkan, serta menghibur pembacanya.\r\n\r\nArtikel tersebut biasanya dipublikasikan di suatu media, mulai buletin, majalah, koran hingga website.\r\n\r\nNah, untuk memahami lebih jelas tentang artikel, bisa membaca pengertian dari para ahli, ciri-ciri, kaidah kebahasaan hingga strukturnya.\r\n\r\nBerikut ini rangkuman tentang pengertian artikel menurut ahli, ciri-ciri, tujuan, manfaat, kaidah kebahasaan hingga strukturnya, seperti dilansir dari laman Gurupendidikan dan Serupa, Rabu (10/3/2021).', 'Terbaca', '2021-04-22'),
 (4, 'ram', 'ramaandikajorgie@gmail.com', 'kunam 123', 'ra', 'Terbaca', '2021-04-22'),
-(5, 'kiki', 'kiki@gmail.com', 'tees kiki', 'tes kiki @123', 'Terbaca', '2021-04-22');
+(5, 'kiki', 'kiki@gmail.com', 'tees kiki', 'tes kiki @123', 'Terbaca', '2021-04-22'),
+(6, 'Kiki Yuniar Kristiawan', 'kiki.nagh.arwolves@gmail.com', 'coba', '<script>alert(\"Selamat datang di tutorial Javascript\");</script>', 'Terbaca', '2021-05-09'),
+(7, 'anty', 'noor@gmail.com', 'coba2', '<script>\r\n        alert(\"Selamat datang di tutorial Javascript\");\r\n    </script>', 'Terbaca', '2021-05-09');
 
 -- --------------------------------------------------------
 
@@ -112,23 +118,10 @@ CREATE TABLE `exp_team` (
 INSERT INTO `exp_team` (`id`, `nama`, `posisi`, `biografi`, `foto`, `waktu`, `updated_at`, `created_at`) VALUES
 (7, 'Iskandar', 'Chief Executive Officer', 'President Director of\r\nPT. Sientratek Energi  Indonesia\r\nPresident Director of\r\nPT. GLEnergi  Teknologi Indonesia\r\nExecutive Director of \r\nPT. Daiwatech  Indonesia International', '1619934702.jpg', '2021-05-02', '2021-05-02 05:51:42', '2021-05-02 05:51:42'),
 (8, 'Abdul Malik', 'Chief Marketing Officer', 'Direktur utama \r\nPT Alihdaya Megah Bersatu Indonesia\r\nGeneral Manager \r\nPT Eksekutif\r\nNational Business Development \r\nPT The Service Line ( SOS TBK group)\r\nGeneral Manager \r\nPT Tritunggal Sejahtera Margawi', '1619934770.jpg', '2021-05-02', '2021-05-02 05:52:50', '2021-05-02 05:52:50'),
-(9, 'Arief Nur Hidayat', 'Chief Technology Officer', 'General Manager of Maluku & Maluku Utara Region \r\nPT. PLN (Persero)\r\nOperational Director \r\nPT. Lestari Satyagraha Kompetensi\r\nSenior Expert Electric Power Distribution \r\nPT. Energi Terbarukan Persada Surya\r\nTechnical Director \r\nPT. Sientratek Energi Indonesia', '1619934841.jpg', '2021-05-02', '2021-05-02 05:54:01', '2021-05-02 05:54:01');
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `failed_jobs`
---
-
-CREATE TABLE `failed_jobs` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `uuid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+(9, 'Arief Nur Hidayat', 'Chief Technology Officer', 'General Manager of Maluku & Maluku Utara Region \r\nPT. PLN (Persero)\r\nOperational Director \r\nPT. Lestari Satyagraha Kompetensi\r\nSenior Expert Electric Power Distribution \r\nPT. Energi Terbarukan Persada Surya\r\nTechnical Director \r\nPT. Sientratek Energi Indonesia', '1619934841.jpg', '2021-05-02', '2021-05-02 05:54:01', '2021-05-02 05:54:01'),
+(10, 'Herry Agusman', 'Chief Project Officer', 'General Manager Engineering\r\nPT Surya Energi Indotama\r\nChief Executive Officer (CEO)\r\nPT Permata Sinergi Madani', '1620570203.jpg', '2021-05-09', '2021-05-09 14:23:23', '2021-05-09 14:23:23'),
+(11, 'H. Zulmi Noor Hasani', 'President Commissioner', 'President Director  \r\nPT Eksekutif\r\nPresident Director  \r\nKoran Pantura\r\nDirector \r\nHasan Foundation\r\nChairman of the Advisory Board \r\nHIPMI Probolinggo Districts', '1620570319.jpg', '2021-05-09', '2021-05-09 14:25:19', '2021-05-09 14:25:19'),
+(12, 'Johny Hartono Poernomo', 'Board Of Commissioner', 'Share Holder\r\nPT. Sientratek Energi  Indonesia\r\nShare Holder\r\nDasaplast Nusantara\r\nShare Holder & President Director\r\nPT. Tri Abadi Sakti\r\nShare Holder & President Director\r\nMaxone Hotel, PT. Gedung Berkat Damai  Sejahtera', '1620570487.jpg', '2021-05-09', '2021-05-09 14:28:07', '2021-05-09 14:28:07');
 
 -- --------------------------------------------------------
 
@@ -149,7 +142,10 @@ CREATE TABLE `migrations` (
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (1, '2014_10_12_000000_create_users_table', 1),
 (2, '2014_10_12_100000_create_password_resets_table', 1),
-(3, '2019_08_19_000000_create_failed_jobs_table', 1);
+(3, '2019_08_19_000000_create_failed_jobs_table', 1),
+(4, '2021_04_28_054438_create_posts_table', 2),
+(6, '2021_05_05_173245_create_blogs_table', 3),
+(7, '2020_09_21_000000_create_canvas_tables', 4);
 
 -- --------------------------------------------------------
 
@@ -235,9 +231,12 @@ CREATE TABLE `post_project` (
 
 INSERT INTO `post_project` (`id`, `judul_project`, `isi`, `waktu`, `bahasa`, `foto`, `status`, `updated_at`, `created_at`) VALUES
 (9, 'Project 1', '<p>Experienced in working on energy projects that are spread throughout Indonesia based on solar energy. With commitment and passionate, we have had ongoing projects from several of our experienced team personnel. Currently more than 38 MW spread across 30 locations in East Java, Central Java, Bali and NTT have worked with us, which includes factories, hotels and malls, and also for investment projects / Independent Power Producers (IPP)</p>', '2021-05-02', 'Indonesia', '1619945671.jpg', 'Tampilkan', '2021-05-02 08:54:31', '2021-05-02 08:54:31'),
-(10, 'project 2', '<p>Experienced in working on energy projects that are spread throughout Indonesia based on solar energy. With commitment and passionate, we have had ongoing projects from several of our experienced team personnel. Currently more than 38 MW spread across 30 locations in East Java, Central Java, Bali and NTT have worked with us, which includes factories, hotels and malls, and also for investment projects / Independent Power Producers (IPP)</p>', '2021-05-02', 'Indonesia', '1619945862.jpg', 'Sembunyikan', '2021-05-02 08:57:42', '2021-05-02 08:57:42'),
-(11, 'project 3', '<p>Experienced in working on energy projects that are spread throughout Indonesia based on solar energy. With commitment and passionate, we have had ongoing projects from several of our experienced team personnel. Currently more than 38 MW spread across 30 locations in East Java, Central Java, Bali and NTT have worked with us, which includes factories, hotels and malls, and also for investment projects / Independent Power Producers (IPP)</p>', '2021-05-02', 'Indonesia', '1619945883.jpg', 'Sembunyikan', '2021-05-02 08:58:03', '2021-05-02 08:58:03'),
-(12, 'project 4', '<p>Experienced in working on energy projects that are spread throughout Indonesia based on solar energy. With commitment and passionate, we have had ongoing projects from several of our experienced team personnel. Currently more than 38 MW spread across 30 locations in East Java, Central Java, Bali and NTT have worked with us, which includes factories, hotels and malls, and also for investment projects / Independent Power Producers (IPP)</p>', '2021-05-02', 'Indonesia', '1619945973.jpg', 'Sembunyikan', '2021-05-02 08:59:33', '2021-05-02 08:59:33');
+(10, 'project 2', '<p>Experienced in working on energy projects that are spread throughout Indonesia based on solar energy. With commitment and passionate, we have had ongoing projects from several of our experienced team personnel. Currently more than 38 MW spread across 30 locations in East Java, Central Java, Bali and NTT have worked with us, which includes factories, hotels and malls, and also for investment projects / Independent Power Producers (IPP)</p>', '2021-05-02', 'Indonesia', '1619945862.jpg', 'Tampilkan', '2021-05-02 08:57:42', '2021-05-02 08:57:42'),
+(11, 'project 3', '<p>Experienced in working on energy projects that are spread throughout Indonesia based on solar energy. With commitment and passionate, we have had ongoing projects from several of our experienced team personnel. Currently more than 38 MW spread across 30 locations in East Java, Central Java, Bali and NTT have worked with us, which includes factories, hotels and malls, and also for investment projects / Independent Power Producers (IPP)</p>', '2021-05-02', 'Indonesia', '1619945883.jpg', 'Tampilkan', '2021-05-02 08:58:03', '2021-05-02 08:58:03'),
+(12, 'project 4', '<p>Experienced in working on energy projects that are spread throughout Indonesia based on solar energy. With commitment and passionate, we have had ongoing projects from several of our experienced team personnel. Currently more than 38 MW spread across 30 locations in East Java, Central Java, Bali and NTT have worked with us, which includes factories, hotels and malls, and also for investment projects / Independent Power Producers (IPP)</p>', '2021-05-02', 'Indonesia', '1619945973.jpg', 'Sembunyikan', '2021-05-02 08:59:33', '2021-05-02 08:59:33'),
+(13, 'menocba projek 5', '<p>bagaimana nggak jelas kan, tapi cakeplah dah kaya apa gitu. Selanjutnya tuangkan kreatifitasmu terus dan asah kemampuanmu.</p>', '2021-05-08', 'Indonesia', '1620407566.jpg', 'Sembunyikan', '2021-05-07 17:12:46', '2021-05-07 17:12:46'),
+(14, 'project 6', '<p>bagaimana nggak jelas kan, tapi cakeplah dah kaya apa gitu. Selanjutnya tuangkan kreatifitasmu terus dan asah kemampuanmu.</p>', '2021-05-08', 'Indonesia', '1620407588.png', 'Sembunyikan', '2021-05-07 17:13:08', '2021-05-07 17:13:08'),
+(15, 'project 7', '<p>bagaimana nggak jelas kan, tapi cakeplah dah kaya apa gitu. Selanjutnya tuangkan kreatifitasmu terus dan asah kemampuanmu.</p>', '2021-05-08', 'Indonesia', '1620407615.jpg', 'Sembunyikan', '2021-05-07 17:13:35', '2021-05-07 17:13:35');
 
 -- --------------------------------------------------------
 
@@ -263,18 +262,44 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `status`, `foto`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Rama Andika Jorgie', 'noor@gmail.com', NULL, '$2y$10$x..nztfVJm.1Ls2vdk0OHuRB20uuL37mysf8RwNvoriVyPQG.bgYu', 'Super Admin', '1619088844.jpg', 'UAJIFRIJQaWocXOqEaK9n0dAAjQOPH82qXMtu7HQd8DxjzdUWA4d5WcWrd0t', '2021-04-10 20:59:42', '2021-04-10 20:59:42'),
+(1, 'Noor Energi Baik', 'noor@gmail.com', NULL, '$2y$10$x..nztfVJm.1Ls2vdk0OHuRB20uuL37mysf8RwNvoriVyPQG.bgYu', 'Super Admin', '1620569717.png', 'UAJIFRIJQaWocXOqEaK9n0dAAjQOPH82qXMtu7HQd8DxjzdUWA4d5WcWrd0t', '2021-04-10 20:59:42', '2021-04-10 20:59:42'),
 (4, 'Rama S.Kom', 'ramaandikajorgie@gmail.com', NULL, '$2y$10$vqZ1IaKcgIFi1/7FCEih1e2afHJMQKNhmIWFvHrNfWK/gbp09sQyu', 'Admin', '1619080158.jpg', NULL, NULL, NULL),
 (6, 'Kiki Yuniar', 'kkikiyuniar@yahoo.co.id', NULL, '$2y$10$YRAf8xBlyuehxC3iSq59xOpAhM/0/c7w778lhiVEBWCKK/nn7mSPC', 'Admin', '1619932667.png', NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in struktur untuk tampilan `view_last_blog`
+-- (Lihat di bawah untuk tampilan aktual)
+--
+CREATE TABLE `view_last_blog` (
+`id` bigint(20) unsigned
+,`judul_blog` varchar(255)
+,`isi` text
+,`isi_thumbnail` text
+,`foto` varchar(255)
+,`waktu` date
+,`created_at` timestamp
+,`updated_at` timestamp
+);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur untuk view `view_last_blog`
+--
+DROP TABLE IF EXISTS `view_last_blog`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_last_blog`  AS  select `blogs`.`id` AS `id`,`blogs`.`judul_blog` AS `judul_blog`,`blogs`.`isi` AS `isi`,`blogs`.`isi_thumbnail` AS `isi_thumbnail`,`blogs`.`foto` AS `foto`,`blogs`.`waktu` AS `waktu`,`blogs`.`created_at` AS `created_at`,`blogs`.`updated_at` AS `updated_at` from `blogs` order by `blogs`.`id` desc limit 1 ;
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `account`
+-- Indeks untuk tabel `blogs`
 --
-ALTER TABLE `account`
+ALTER TABLE `blogs`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -294,13 +319,6 @@ ALTER TABLE `data_visi_misi`
 --
 ALTER TABLE `exp_team`
   ADD PRIMARY KEY (`id`);
-
---
--- Indeks untuk tabel `failed_jobs`
---
-ALTER TABLE `failed_jobs`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
 
 --
 -- Indeks untuk tabel `migrations`
@@ -344,16 +362,16 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT untuk tabel `account`
+-- AUTO_INCREMENT untuk tabel `blogs`
 --
-ALTER TABLE `account`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `blogs`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT untuk tabel `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT untuk tabel `data_visi_misi`
@@ -365,19 +383,13 @@ ALTER TABLE `data_visi_misi`
 -- AUTO_INCREMENT untuk tabel `exp_team`
 --
 ALTER TABLE `exp_team`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
---
--- AUTO_INCREMENT untuk tabel `failed_jobs`
---
-ALTER TABLE `failed_jobs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT untuk tabel `post_about`
@@ -395,7 +407,7 @@ ALTER TABLE `post_album`
 -- AUTO_INCREMENT untuk tabel `post_project`
 --
 ALTER TABLE `post_project`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`

@@ -20,7 +20,7 @@
                                                             <th>Foto</th>
                                                            
                                                             <th>Judul Blog</th>
-                                                            <th>Isi Materi</th>
+                                                            <th>Isi Thumbnail</th>
                                                             <th>Waktu</th>
                                                             <th>Action</th>
                                                             
@@ -32,7 +32,7 @@
                                                         <tr style="text-align: center;">
                                                             <td><img src="{{ asset('/assets_post_blog/'.$tampilkan->foto) }}" alt="" style="width: 80px; height: 80px;"></td></td>
                                                             <td>{{$tampilkan->judul_blog}}</td>
-                                                            <td><?php echo $tampilkan->isi?></td>
+                                                            <td><?php echo $tampilkan->isi_thumbnail?></td>
                                                             <td>{{$tampilkan->waktu}}</td>
                                                             <td>
                                                                 <a href="/del_blog/{{ $tampilkan->id}}" class="delete"><i class="material-icons " style="color: red;" data-toggle="tooltip" title="Delete">&#xE872;</i></a>

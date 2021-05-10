@@ -91,7 +91,7 @@
                                     </div>
                                     <div class="mb-3">
                                         <label for="message-text" class="col-form-label">Message:</label>
-                                        <textarea class="form-control" id="message-text" style="width: 100%; height: 300px;" >{{$tampilka->msg}}</textarea>
+                                        <textarea class="form-control" id="message-text" style="width: 100%; height: 300px;" >{!! nl2br($tampilka->msg) !!}</textarea>
                                     </div>
                                     </form>
                                 </div>
@@ -103,9 +103,4 @@
                             </div>
                             </div>
                             @endforeach
-
-
-
-
-                         
     @endsection

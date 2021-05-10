@@ -12,8 +12,6 @@
                                         <ul class="nav nav-tabs nav-bordered mb-3">
                                             
                                         </ul> <!-- end nav-->
-                                        
-                                                                               
                                         <form action="/proses_add_blog" method="post" enctype="multipart/form-data">
                                           @csrf
                                           @if ($message = Session::get('success'))
@@ -23,19 +21,28 @@
                                         </div>
                                         @endif
                                         <div class="mb-3">
-                                                    <label for="example-date" class="form-label">Waktu</label>
-                                                    <input class="form-control" id="example-date" type="date" name="waktu" style="text-align: center;" required>
+                                          <label for="example-date" class="form-label">Waktu</label>
+                                          <input class="form-control" id="example-date" type="date" name="waktu" style="text-align: center;" required>
                                         </div>
                                         
                                         <div class="mb-3">
                                           <label for="projectname" class="form-label" >Judul Blog </label>
                                           <input type="text"  name="judul_blog" class="form-control">
-                                                
                                         </div>
+
+                                        <div class="tab-content">
+                                          <label for="projectname" class="form-label" >Isi Thumbnail </label>
+                                          <textarea cols="20" rows="50" name="isi_thumbnail" ></textarea>
+                                            <script>
+                                                    CKEDITOR.replace( 'isi_thumbnail' );
+                                            </script>
+                                            <div style="text-align: center; margin-top: 10px;">
+                                            </div>
+                                        </div>
+
                                         <div class="mb-3" style="text-align: center;">
                                         <label for="">Tambahkan Foto</label>
-                                       <input type="file" name="foto" id="" required>
-                                            
+                                        <input type="file" id="projectname" name="foto" class="form-control" placeholder="Posisi Saat ini" required>
                                         </div>
                                       
 
@@ -47,6 +54,7 @@
                                                 <div style="text-align: center; margin-top: 10px;">
                                                 <button class="btn btn-success" type="submit">Add Blog</button>
                                                 </div>
+                                        </div>
                                         </form>
 
                                       
