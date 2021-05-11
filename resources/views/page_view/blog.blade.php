@@ -29,7 +29,11 @@
               <div class="blog-content">
                 <h4><a href="#">{{ $item->judul_blog }}</a></h4>
                 <p>{!! nl2br($item->isi_thumbnail) !!}</p>
-                <a class="read-more" href="#">Read More <i class="lni lni-arrow-right"></i></a>
+                <form action="/detail_blog" method="get">
+                  @csrf
+                  <input type="text" value="{{$item->id}}" name="id" hidden>
+                <button style="background-color: rgba(255, 255, 255, 0); background-repeat:no-repeat;border: none;cursor:pointer; overflow: hidden;" type="submit" class="read-more">Read More <i class="lni lni-arrow-right"></i></button>
+                </form>
               </div>
             </div>
           </div>

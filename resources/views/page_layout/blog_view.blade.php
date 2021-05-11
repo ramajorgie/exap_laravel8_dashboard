@@ -17,11 +17,9 @@
                                                 <table id="scroll-vertical-datatable" class="table dt-responsive nowrap">
                                                     <thead>
                                                         <tr style="text-align: center;">
-                                                            <th>Foto</th>
-                                                           
-                                                            <th>Judul Blog</th>
+                                                            <th style="width: 25%">Judul Blog</th>
                                                             <th>Isi Thumbnail</th>
-                                                            <th>Waktu</th>
+                                                            <th style="width: 19%">Waktu</th>
                                                             <th>Action</th>
                                                             
                                                         </tr>
@@ -30,10 +28,9 @@
                                                @foreach ($data as $tampilkan)
                                                     <tbody>
                                                         <tr style="text-align: center;">
-                                                            <td><img src="{{ asset('/assets_post_blog/'.$tampilkan->foto) }}" alt="" style="width: 80px; height: 80px;"></td></td>
                                                             <td>{{$tampilkan->judul_blog}}</td>
-                                                            <td><?php echo $tampilkan->isi_thumbnail?></td>
-                                                            <td>{{$tampilkan->waktu}}</td>
+                                                            <td>{!! nl2br($tampilkan->isi_thumbnail)!!}</td>
+                                                            <td>{{ date("l, d F Y", strtotime($tampilkan->waktu)) }}</td>
                                                             <td>
                                                                 <a href="/del_blog/{{ $tampilkan->id}}" class="delete"><i class="material-icons " style="color: red;" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                                                 <form action="/view_edit_blog" method="get">

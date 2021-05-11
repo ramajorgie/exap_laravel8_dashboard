@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\PostAbout_Model;
 use App\Models\PostAlbum_Model;
 use App\Models\Visi_Misi_Model;
+use Illuminate\Support\Str;
 
 
 
@@ -100,8 +101,6 @@ class PostController extends Controller
         $data_album = DB::table('post_album')->get();
         return view('page_layout.list_postalbum',['data'=>$data_album]);
     }
-
-    
 
     public function view_experience_team()
     {      

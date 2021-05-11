@@ -45,7 +45,6 @@
                                         <input type="file" id="projectname" name="foto" class="form-control" placeholder="Posisi Saat ini" required>
                                         </div>
                                       
-
                                         <div class="tab-content">
                                               <textarea cols="20" rows="50" name="isi" ></textarea>
                                                 <script>

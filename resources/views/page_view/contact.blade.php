@@ -3,20 +3,15 @@
 @section('title','Contact')
 
 @section('container')
-    <section id="contact" class="contact-section pt-120 pb-160">
+    <section id="contact" class="contact-section pt-40 pb-160">
       <div class="shape shape-7">
         <img src="assets/img/shapes/shape-7.svg" alt="" />
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-xl-8 mx-auto">
+          <div class="col-xl-12">
             <div class="section-title text-center mb-55">
-              <span class="wow fadeInDown" data-wow-delay=".2s">Appoinment</span>
-              <h2 class="mb-15 wow fadeInUp" data-wow-delay=".4s">Get Appoinment Now</h2>
-              <p class="wow fadeInLeft" data-wow-delay=".6s">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dinonumy <br class="d-none d-lg-block" />
-                eirmod tempor invidunt ut labore et dolore magn.
-              </p>
+              <span class="wow fadeInDown" data-wow-delay=".2s">Contact Us</span>
             </div>
           </div>
         </div>
