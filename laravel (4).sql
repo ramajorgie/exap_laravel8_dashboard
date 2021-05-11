@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 10 Bulan Mei 2021 pada 03.37
+-- Waktu pembuatan: 11 Bulan Mei 2021 pada 04.56
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.3.18
 
@@ -30,6 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `blogs` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `judul_blog` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug_judul` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
   `isi` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `isi_thumbnail` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `foto` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -42,10 +43,10 @@ CREATE TABLE `blogs` (
 -- Dumping data untuk tabel `blogs`
 --
 
-INSERT INTO `blogs` (`id`, `judul_blog`, `isi`, `isi_thumbnail`, `foto`, `waktu`, `created_at`, `updated_at`) VALUES
-(7, 'satu', '<p>Kemudian buat bootstrap master template dengan mengetikan&nbsp;b4-&nbsp;nanti pilih yang&nbsp;b4-$, ini akan bisa jika kalau memakai vscode dengan extension bootstrap4 snippets. Atau kalao selain vscode ketikan dibawah ini</p>', '<p>Kemudian buat bootstrap master template dengan mengetikan&nbsp;b4-&nbsp;nanti pilih yang&nbsp;b4-$, ini akan bisa jika kalau memakai vscode dengan extension bootstrap4 snippets. Atau kalao selain vscode ketikan dibawah ini</p>', '1620572237.jpg', '2021-05-09', NULL, NULL),
-(8, 'dua', '<p>Kemudian buat bootstrap master template dengan mengetikan&nbsp;b4-&nbsp;nanti pilih yang&nbsp;b4-$, ini akan bisa jika kalau memakai vscode dengan extension bootstrap4 snippets. Atau kalao selain vscode ketikan dibawah ini</p>', '<p>Kemudian buat bootstrap master template dengan mengetikan&nbsp;b4-&nbsp;nanti pilih yang&nbsp;b4-$, ini akan bisa jika kalau memakai vscode dengan extension bootstrap4 snippets. Atau kalao selain vscode ketikan dibawah ini</p>', '1620572264.jpg', '2021-05-09', NULL, NULL),
-(9, 'tiga', '<p>W3Schools is optimized for learning and training. Examples might be simplified to improve reading and learning. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using W3Schools, you agree to have read and accepted our&nbsp;<a href=\"https://www.w3schools.com/about/about_copyright.asp\">terms of use</a>,&nbsp;<a href=\"https://www.w3schools.com/about/about_privacy.asp\">cookie and privacy</a></p>', '<p>adang saya membutuhkan query untuk memanggil data terbaru dari tabel MySQL. Tapi, sering lupa. Berikut ini saya jelaskan tentang penggunaan query MySQL untuk menampilkan data terbaru sekaligus untuk catatan pribadi buat saya kalau besok lupa lagi.</p>', '1620574779.png', '2021-05-09', NULL, NULL);
+INSERT INTO `blogs` (`id`, `judul_blog`, `slug_judul`, `isi`, `isi_thumbnail`, `foto`, `waktu`, `created_at`, `updated_at`) VALUES
+(7, 'satu', '', '<p>Kemudian buat bootstrap master template dengan mengetikan&nbsp;b4-&nbsp;nanti pilih yang&nbsp;b4-$, ini akan bisa jika kalau memakai vscode dengan extension bootstrap4 snippets. Atau kalao selain vscode ketikan dibawah ini</p>', '<p>Kemudian buat bootstrap master template dengan mengetikan&nbsp;b4-&nbsp;nanti pilih yang&nbsp;b4-$, ini akan bisa jika kalau memakai vscode dengan extension bootstrap4 snippets. Atau kalao selain vscode ketikan dibawah ini</p>', '1620572237.jpg', '2021-05-09', NULL, NULL),
+(8, 'dua', '', '<p>Kemudian buat bootstrap master template dengan mengetikan&nbsp;b4-&nbsp;nanti pilih yang&nbsp;b4-$, ini akan bisa jika kalau memakai vscode dengan extension bootstrap4 snippets. Atau kalao selain vscode ketikan dibawah ini</p>', '<p>Kemudian buat bootstrap master template dengan mengetikan&nbsp;b4-&nbsp;nanti pilih yang&nbsp;b4-$, ini akan bisa jika kalau memakai vscode dengan extension bootstrap4 snippets. Atau kalao selain vscode ketikan dibawah ini</p>', '1620572264.jpg', '2021-05-09', NULL, NULL),
+(9, 'tiga', '', '<p>W3Schools is optimized for learning and training. Examples might be simplified to improve reading and learning. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using W3Schools, you agree to have read and accepted our&nbsp;<a href=\"https://www.w3schools.com/about/about_copyright.asp\">terms of use</a>,&nbsp;<a href=\"https://www.w3schools.com/about/about_privacy.asp\">cookie and privacy</a></p>', '<p>adang saya membutuhkan query untuk memanggil data terbaru dari tabel MySQL. Tapi, sering lupa. Berikut ini saya jelaskan tentang penggunaan query MySQL untuk menampilkan data terbaru sekaligus untuk catatan pribadi buat saya kalau besok lupa lagi.</p>', '1620574779.png', '2021-05-09', NULL, NULL);
 
 -- --------------------------------------------------------
 
