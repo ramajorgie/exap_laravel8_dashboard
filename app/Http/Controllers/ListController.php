@@ -74,4 +74,11 @@ class ListController extends Controller
        
         return view('page_layout.blog_view_edit',['data' => $view_edit_blog]);
     }
+
+
+    public function baca_blog(Request $request)
+    {
+        $view_blog = DB::table('blogs')->where('slug_judul',$request->slug_judul)->get();
+        dd($view_blog);
+    }
 } 

@@ -202,7 +202,7 @@ class PostController extends Controller
 
     public function view_blog(){
 
-        $view = DB::table('blogs')->get();
+        $view = DB::table('post_blog')->get();
         return view('page_layout.blog_view',['data' => $view]);
     }
     public function view_blog_front(){
@@ -215,14 +215,17 @@ class PostController extends Controller
     }
 
     public function add_blog(Request $request){
+        $slug_judul= str_replace(" ", "-", $request->judul_blog);
         $imageName = time().'.'.$request->foto->extension();  
         $request->foto->move(public_path('assets_post_blog'), $imageName);
-
+       
 
         DB::table('blogs')
             ->insert([
              'judul_blog'    =>$request->judul_blog,
+             'slug_judul'   =>$slug_judul,
              'waktu'       =>$request->waktu,
+             'isi_thumbnail' =>$request->isi_thumbnail,
              'isi'           =>$request->isi,
              'foto'          =>$imageName,
             ]);

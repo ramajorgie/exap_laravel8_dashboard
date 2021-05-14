@@ -33,7 +33,7 @@
                                                             <td><img src="{{ asset('/assets_post_blog/'.$tampilkan->foto) }}" alt="" style="width: 80px; height: 80px;"></td></td>
                                                             <td>{{$tampilkan->judul_blog}}</td>
                                                             <td><?php echo $tampilkan->isi?></td>
-                                                            <td>{{$tampilkan->waktu}}</td>
+                                                            <td>{{$tampilkan->tanggal}}</td>
                                                             <td>
                                                                 <a href="/del_blog/{{ $tampilkan->id}}" class="delete"><i class="material-icons " style="color: red;" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                                                 <form action="/view_edit_blog" method="get">

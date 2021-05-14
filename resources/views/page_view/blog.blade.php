@@ -29,7 +29,7 @@
               <div class="blog-content">
                 <h4><a href="#">{{ $item->judul_blog }}</a></h4>
                 <p>{!! nl2br($item->isi) !!}</p>
-                <a class="read-more" href="#">Read More <i class="lni lni-arrow-right"></i></a>
+                <a class="read-more" href="/baca/{{ $item->slug_judul}}">Read More <i class="lni lni-arrow-right"></i></a>
               </div>
             </div>
           </div>
