@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 
 
@@ -71,14 +72,19 @@ class ListController extends Controller
 
     public function view_edit_blog(Request $request){
         $view_edit_blog = DB::table('blogs')->where('id',$request->id)->get();
-       
         return view('page_layout.blog_view_edit',['data' => $view_edit_blog]);
     }
 
 
     public function baca_blog(Request $request)
     {
-        $view_blog = DB::table('blogs')->where('slug_judul',$request->slug_judul)->get();
-        dd($view_blog);
+        $detail_blog = DB::table('blogs')->where('slug_judul',$request->slug_judul)->get();
+       
+        return view('detail_blogs.detail_blog',['detail'=>$detail_blog]);
     }
+    // public function detail_blogs(Request $request){
+    //     $detail_blog = DB::table('blogs')->where('id',$request->id)->get();
+    //     return view('detail_blogs.detail_blog',['detail'=>$detail_blog]);
+
+    // }
 } 

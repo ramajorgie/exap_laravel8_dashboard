@@ -15,6 +15,7 @@
                                         @foreach ($data as $item)
                                         <form action="/update_blog" method="post" enctype="multipart/form-data">
                                         @csrf
+                                        <input type="text" name="id" value="{{$item->id}}" hidden>
                                         @if ($message = Session::get('success'))
                                             <div style="text-align: center" class="alert alert-success alert-dismissible fade show" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -29,6 +30,12 @@
                                         <div class="mb-3">
                                             <label for="projectname" class="form-label" >Judul Blog </label>
                                             <input type="text" name="judul_blog" class="form-control" value="{{$item->judul_blog}}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <textarea cols="20" rows="50" name="isi_thumbnail" >{{$item->isi_thumbnail}}</textarea>
+                                            <script>
+                                                    CKEDITOR.replace( 'isi_thumbnail' );
+                                            </script>
                                         </div>
                                         <div class="mb-3">
                                             <label for="example-date" class="form-label">Foto</label>

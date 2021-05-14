@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\PostAbout_Model;
 use App\Models\PostAlbum_Model;
 use App\Models\Visi_Misi_Model;
+use Illuminate\Support\Str;
 
 
 
@@ -100,8 +101,6 @@ class PostController extends Controller
         $data_album = DB::table('post_album')->get();
         return view('page_layout.list_postalbum',['data'=>$data_album]);
     }
-
-    
 
     public function view_experience_team()
     {      
@@ -202,7 +201,7 @@ class PostController extends Controller
 
     public function view_blog(){
 
-        $view = DB::table('post_blog')->get();
+        $view = DB::table('blogs')->get();
         return view('page_layout.blog_view',['data' => $view]);
     }
     public function view_blog_front(){
@@ -227,6 +226,7 @@ class PostController extends Controller
              'waktu'       =>$request->waktu,
              'isi_thumbnail' =>$request->isi_thumbnail,
              'isi'           =>$request->isi,
+             'isi_thumbnail' =>$request->isi_thumbnail,
              'foto'          =>$imageName,
             ]);
             return redirect()->back()->with('success', 'Berhasil DiTambahkan');
@@ -238,7 +238,8 @@ class PostController extends Controller
             ->update([
              'judul_blog'    =>$request->judul_blog,
              'waktu'         =>$request->waktu,
-             'isi'           =>$request->isi
+             'isi'           =>$request->isi,
+             'isi_thumbnail' =>$request->isi_thumbnail
             ]);
         }
         else{
@@ -249,6 +250,7 @@ class PostController extends Controller
                 'judul_blog'    =>$request->judul_blog,
                 'waktu'         =>$request->waktu,
                 'isi'           =>$request->isi,
+                'isi_thumbnail' =>$request->isi_thumbnail,
                 'foto'          =>$imageName
             ]);
         }

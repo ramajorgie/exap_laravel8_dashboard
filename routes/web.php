@@ -43,6 +43,20 @@ Route::get('/login', function () {
 Route::get('/baca/{slug_judul}',[ListController::class, 'baca_blog']);
 
 Route::post('login', [LoginController::class, 'login'])->name('login');
+    //     return view('page_view.blog');
+    // });
+    Route::get('/contact', function () {
+        return view('page_view.contact');
+    });
+    Route::get('/bussiness', function () {
+        return view('page_view.bussiness');
+    });
+    Route::get('/login', function () {
+        return view('home.login');
+    });
+    
+    Route::post('login', [LoginController::class, 'login'])->name('login');
+    Route::get('/detail_blog',[ListController::class, 'detail_blogs']); 
 
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/visi_misi',[ListController::class, 'view_visi_misi']);
@@ -84,7 +98,6 @@ Route::group(['middleware' => 'auth'], function() {
     Route::post('/insert_postalbum',[PostController::class, 'post_album']);
     Route::post('/insert_postproject',[PostController::class, 'post_project']);
     Route::get('logout', [LoginController::class, 'logout'])->name('logout');
-
     Route::get('/view_edit_blog',[ListController::class, 'view_edit_blog']);
     Route::post('/update_blog',[PostController::class, 'update_blog']);
     Route::get('/del_blog/{id}',[DeleteController::class, 'del_blog']);
