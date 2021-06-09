@@ -50,4 +50,8 @@
         </div>
       </div>
     </section>
+
+    <!-- <form action="/kirimemail" method="get">
+    <button type="submit">test Email</button>
+    </form> -->
 @endsection

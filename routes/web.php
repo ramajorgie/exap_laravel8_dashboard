@@ -5,9 +5,11 @@ use App\Http\Controllers\DeleteController;
 use App\Http\Controllers\ListController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\MainEmailController;
 use App\Http\Controllers\Msg_Controller;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileControler;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -39,6 +41,9 @@ Route::get('/bussiness', function () {
 Route::get('/login', function () {
     return view('home.login');
 });
+
+Route::get('/kirimemail', [MainEmailController::class,'index']);
+
 
 Route::get('/baca/{slug_judul}',[ListController::class, 'baca_blog']);
 
@@ -104,6 +109,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/add_blog', function () {return view('page_layout.form_blog');});
     Route::get('/view_blog',[PostController::class, 'view_blog']);
     Route::post('/proses_add_blog',[PostController::class, 'add_blog']);
+
 
    
 });

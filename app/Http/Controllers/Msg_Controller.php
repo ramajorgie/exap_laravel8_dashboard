@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Mail\TestMail;
+use Illuminate\Support\Facades\Mail;
 
 
 
@@ -20,6 +22,12 @@ class Msg_Controller extends Controller
           'status' => 'Belum Terbaca',
           'waktu' => date('Y-m-d'),
          ]);
+
+         $nama = $request->nama;
+         $email = $request->email;
+         $pesan = $request->msg;
+
+         Mail::to('info@noorenergi.co.id')->send(new TestMail($nama,$email,$pesan));
 
          return redirect()->back();
 
